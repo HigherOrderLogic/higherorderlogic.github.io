@@ -1,5 +1,5 @@
 <template>
-  <div class="outer-container">
+  <div class="outer-app-container">
     <navbar />
     <div class="page-container">
       <nuxt-page />
@@ -8,7 +8,7 @@
 </template>
 
 <style>
-.outer-conatainer {
+.outer-app-conatainer {
   --at-apply: "font-sans";
 }
 

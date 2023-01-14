@@ -17,7 +17,7 @@ const twitterProfileURL = ref(`https://twitter.com/${props.githubUsername}`);
         <prose-img :src="githubAvatarURL" class="github-avatar" />
       </nuxt-link>
     </div>
-    <div class="content-container social-links">
+    <div class="content-container social-links-container">
       <prose-a :href="githubProfileURL" target="_blank" rel="noopener"
         >Github</prose-a
       >
@@ -26,7 +26,9 @@ const twitterProfileURL = ref(`https://twitter.com/${props.githubUsername}`);
       >
     </div>
     <div class="content-container">
-      <prose-p>"Hey, I'm HigherOrderLogic. You can call me Horu!"</prose-p>
+      <prose-p>{{
+        `Hey, I'm ${githubUsername}. You can call me Horu!`
+      }}</prose-p>
     </div>
   </div>
 </template>
@@ -43,7 +45,7 @@ const twitterProfileURL = ref(`https://twitter.com/${props.githubUsername}`);
     }
   }
 
-  .social-links {
+  .social-links-container {
     * {
       --at-apply: "mx-4";
     }

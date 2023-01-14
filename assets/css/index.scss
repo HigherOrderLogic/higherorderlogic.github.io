@@ -15,11 +15,12 @@ html.dark {
 html,
 body,
 #__nuxt {
-  --at-apply: "h-[100vh]";
+  height: 100vh;
 }
 
 html {
   background-color: var(--c-bg);
+  transition: background-color .2 linear;
 }
 
 * {

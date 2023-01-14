@@ -1,6 +1,6 @@
 ---
-title: "Horu.me"
-description: "Horu's personal site."
+title: Horu.me
+description: Horu's personal site.
 ---
 
 :profile{github-username="HigherOrderLogic"}

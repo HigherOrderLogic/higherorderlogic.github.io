@@ -50,7 +50,7 @@ function getYear(a: string) {
   }
 
   .blog-title {
-    --at-apply: "text-5";
+    --at-apply: "text-[18px]";
 
     + .blog-date {
       --at-apply: "font-semibold opacity-50";

@@ -1,6 +1,6 @@
 ---
-title: "Horu's blogs"
-description: "Archive of blogs written by Horu."
+title: Horu's blogs
+description: Archive of blogs written by Horu.
 ---
 
 # Blogs
