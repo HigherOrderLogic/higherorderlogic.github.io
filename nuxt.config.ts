@@ -1,4 +1,9 @@
-import { presetIcons, presetUno, transformerDirectives } from "unocss";
+import {
+  presetIcons,
+  presetUno,
+  presetWebFonts,
+  transformerDirectives,
+} from "unocss";
 
 export default defineNuxtConfig({
   extends: "@nuxt-themes/typography",
@@ -11,7 +16,15 @@ export default defineNuxtConfig({
 
   unocss: {
     components: false,
-    presets: [presetIcons(), presetUno()],
+    presets: [
+      presetIcons(),
+      presetUno(),
+      presetWebFonts({
+        fonts: {
+          sans: "Open Sans",
+        },
+      }),
+    ],
     transformers: [transformerDirectives()],
   },
 
