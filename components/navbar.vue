@@ -27,7 +27,7 @@
 
   a,
   button {
-    --at-apply: "flex items-center cursor-pointer c-gray-600 dark:c-gray-400 p-x-[0.5rem] p-y-[0.5rem]";
+    --at-apply: "flex items-center cursor-pointer c-gray-600 dark:c-gray-400 px-[0.5rem] py-[0.5rem] transition-200";
 
     &:hover {
       --at-apply: "c-gray-900 dark:c-gray-100";

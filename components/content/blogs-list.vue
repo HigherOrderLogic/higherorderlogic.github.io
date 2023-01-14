@@ -12,12 +12,8 @@ const { data: blogs } = await useAsyncData(
 );
 
 function getYear(a: string) {
-  try {
-    const year = new Date(a).getFullYear();
-    return Number.isNaN(year) ? 1990 : year;
-  } catch {
-    return 1990;
-  }
+  const year = new Date(a).getFullYear();
+  return Number.isNaN(year) ? 1990 : year;
 }
 </script>
 
@@ -29,12 +25,36 @@ function getYear(a: string) {
     <template v-for="(blog, idx) in blogs" v-else :key="blog.path">
       <prose-h2
         v-if="idx === 0 || getYear(blog.date) != getYear(blogs[idx - 1].date)"
-        :id="getYear(blog.date).toString()">
+        :id="getYear(blog.date).toString()"
+        class="year-index">
         {{ getYear(blog.date) }}
       </prose-h2>
-      <prose-li
-        ><prose-a :href="blog._path">{{ blog.title }}</prose-a></prose-li
+      <prose-li class="blog-index"
+        ><prose-a :href="blog._path" class="blog-title">{{
+          blog.title
+        }}</prose-a>
+        <div class="blog-date">{{ useDate(blog.date) }}</div></prose-li
       >
     </template>
   </prose-ul>
 </template>
+
+<style lang="scss">
+.year-index {
+  --at-apply: "!mb-0 !font-bold";
+}
+
+.blog-index {
+  * {
+    --at-apply: "transition-200";
+  }
+
+  .blog-title {
+    --at-apply: "text-5";
+
+    + .blog-date {
+      --at-apply: "font-semibold opacity-50";
+    }
+  }
+}
+</style>

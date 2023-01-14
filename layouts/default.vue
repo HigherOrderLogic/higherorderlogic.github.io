@@ -3,27 +3,22 @@ import type { IBlog } from "~/types";
 
 const route = useRoute();
 
-const { data: pageData } = useAsyncData("is-blog-page", async () => {
+const { data: blogData } = useAsyncData("is-blog-page", async () => {
   const matches = route.path.match(/^\/blog\/[a-z\-#]+\/?$/) || [];
-  const isBlogPage = (matches.length || 0) > 0;
-  let blogTitle = "";
-  if (isBlogPage) {
-    blogTitle = (await queryContent<IBlog>(route.path).findOne()).title || "";
+  let blog = null;
+  if ((matches.length || 0) > 0) {
+    blog = await queryContent<IBlog>(route.path).findOne();
   }
-  return {
-    isBlogPage,
-    blogTitle,
-  };
+  return blog;
 });
 </script>
 
 <template>
   <div>
-    <prose-h1
-      v-if="pageData && pageData.isBlogPage && pageData.blogTitle.length > 0"
-      id="title"
-      >{{ pageData.blogTitle }}</prose-h1
-    >
+    <template v-if="blogData && (blogData.title.length || 0) > 0"
+      ><prose-h1 id="title" class="blog-title">{{ blogData.title }}</prose-h1>
+      <div class="blog-date">{{ useDate(blogData.date) }}</div>
+    </template>
     <slot />
     <prose-a
       v-if="route.path !== '/'"
@@ -32,3 +27,13 @@ const { data: pageData } = useAsyncData("is-blog-page", async () => {
     >
   </div>
 </template>
+
+<style lang="scss">
+.blog-title {
+  --at-apply: "!mb-0";
+
+  + .blog-date {
+    --at-apply: "font-semibold opacity-50";
+  }
+}
+</style>
