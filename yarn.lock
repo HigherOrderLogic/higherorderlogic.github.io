@@ -4801,6 +4801,7 @@ __metadata:
     "@nuxt-themes/typography": ^0.4.0
     "@nuxt/content": ^2.3.0
     "@nuxt/eslint-config": ^0.1.1
+    "@nuxtjs/color-mode": ^3.2.0
     "@unocss/nuxt": ^0.48.4
     eslint: ^8.31.0
     eslint-config-prettier: ^8.6.0

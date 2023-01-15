@@ -8,6 +8,8 @@ import {
 export default defineNuxtConfig({
   extends: "@nuxt-themes/typography",
 
+  appConfig: { githubUsername: "HigherOrderLogic", altName: "Horu" },
+
   css: ["~/assets/css/index.scss"],
 
   modules: ["~/modules/content-transformers", "@nuxt/content", "@unocss/nuxt"],

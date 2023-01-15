@@ -1,13 +1,11 @@
 <script lang="ts" setup>
-const props = defineProps({
-  githubUsername: { type: String, required: true },
-});
+const { githubUsername } = useAppConfig();
 
 const githubAvatarURL = ref(
-  `https://avatars.githubusercontent.com/${props.githubUsername}`,
+  `https://avatars.githubusercontent.com/${githubUsername}`,
 );
-const githubProfileURL = ref(`https://github.com/${props.githubUsername}`);
-const twitterProfileURL = ref(`https://twitter.com/${props.githubUsername}`);
+const githubProfileURL = ref(`https://github.com/${githubUsername}`);
+const twitterProfileURL = ref(`https://twitter.com/${githubUsername}`);
 </script>
 
 <template>

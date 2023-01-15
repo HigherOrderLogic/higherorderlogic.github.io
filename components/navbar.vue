@@ -1,11 +1,13 @@
+<script lang="ts" setup>
+const { githubUsername } = useAppConfig();
+const githubProfileURL = ref(`https://github.com/${githubUsername}`);
+</script>
+
 <template>
   <div class="navbar">
     <nuxt-link to="/"><p>Home</p></nuxt-link>
     <nuxt-link to="/blog"><p>Blog</p></nuxt-link>
-    <nuxt-link
-      href="https://github.com/HigherOrderLogic"
-      target="_blank"
-      rel="noopener">
+    <nuxt-link :href="githubProfileURL" target="_blank" rel="noopener">
       <div class="i-mdi-github" />
     </nuxt-link>
     <button

@@ -3,4 +3,4 @@ title: Horu.me
 description: Horu's personal site.
 ---
 
-:profile{github-username="HigherOrderLogic"}
+:profile{}
