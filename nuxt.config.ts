@@ -10,7 +10,7 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/index.scss"],
 
-  modules: ["@nuxt/content", "@unocss/nuxt"],
+  modules: ["~/modules/content-transformers", "@nuxt/content", "@unocss/nuxt"],
 
   content: { documentDriven: true },
 

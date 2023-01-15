@@ -33,8 +33,10 @@ function getYear(a: string) {
         ><prose-a :href="blog._path" class="blog-title">{{
           blog.title
         }}</prose-a>
-        <div class="blog-date">{{ useDate(blog.date) }}</div></prose-li
-      >
+        <div class="blog-data">
+          {{ `${useFormattedDate(blog.date)} · ${blog.readTime}` }}
+        </div>
+      </prose-li>
     </template>
   </prose-ul>
 </template>
@@ -52,7 +54,7 @@ function getYear(a: string) {
   .blog-title {
     --at-apply: "text-[18px]";
 
-    + .blog-date {
+    + .blog-data {
       --at-apply: "font-semibold opacity-50";
     }
   }

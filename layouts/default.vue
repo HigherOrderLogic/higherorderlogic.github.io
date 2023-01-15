@@ -3,7 +3,7 @@ import type { IBlog } from "~/types";
 
 const route = useRoute();
 
-const { data: blogData } = useAsyncData("is-blog-page", async () => {
+const { data: blog } = useAsyncData("is-blog-page", async () => {
   const matches = route.path.match(/^\/blog\/[a-z\-#]+\/?$/) || [];
   let blog = null;
   if ((matches.length || 0) > 0) {
@@ -15,9 +15,11 @@ const { data: blogData } = useAsyncData("is-blog-page", async () => {
 
 <template>
   <div>
-    <template v-if="blogData && (blogData.title.length || 0) > 0"
-      ><prose-h1 id="title" class="blog-title">{{ blogData.title }}</prose-h1>
-      <div class="blog-date">{{ useDate(blogData.date) }}</div>
+    <template v-if="blog && (blog.title.length || 0) > 0"
+      ><prose-h1 id="title" class="blog-title">{{ blog.title }}</prose-h1>
+      <div class="blog-data">
+        {{ `${useFormattedDate(blog.date)} · ${blog.readTime}` }}
+      </div>
     </template>
     <slot />
     <prose-a
@@ -32,7 +34,7 @@ const { data: blogData } = useAsyncData("is-blog-page", async () => {
 .blog-title {
   --at-apply: "!mb-0";
 
-  + .blog-date {
+  + .blog-data {
     --at-apply: "font-semibold opacity-50";
   }
 }

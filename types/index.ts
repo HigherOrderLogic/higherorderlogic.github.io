@@ -1,8 +1,6 @@
-export interface IBlog {
-  /**
-   * This is provided by `@nuxt/content`
-   */
-  _path: string;
+import type { ParsedContentInternalMeta } from "@nuxt/content/dist/runtime/types";
+
+export interface IBlog extends ParsedContentInternalMeta {
   title: string;
   description: string;
   date: string;
