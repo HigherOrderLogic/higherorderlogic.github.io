@@ -11,13 +11,14 @@ interface ContentExcerpt {
 }
 
 function parseContentExcerpt(child: ContentExcerpt) {
-  if (child.type != "text") return "";
   let content = "";
-  if (child.value) {
+  if (child.value && child.type === "text") {
     content += child.value;
   }
   if (child.children && child.children.length > 0) {
-    content += parseContentExcerpt(child);
+    child.children.forEach((c) => {
+      content += parseContentExcerpt(c);
+    });
   }
   return content;
 }
@@ -32,7 +33,7 @@ export default defineTransformer({
         parseContentExcerpt(content.excerpt),
       );
       if (readTime > 1) {
-        content.readTime = `${readTime} mins read`;
+        content.readTime = `${Math.ceil(readTime)} mins read`;
       }
     }
     return content;
