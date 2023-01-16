@@ -609,11 +609,11 @@ __metadata:
   linkType: hard
 
 "@iconify-json/mdi@npm:^1.1.42":
-  version: 1.1.42
-  resolution: "@iconify-json/mdi@npm:1.1.42"
+  version: 1.1.43
+  resolution: "@iconify-json/mdi@npm:1.1.43"
   dependencies:
     "@iconify/types": "*"
-  checksum: c5a9ba59d9088561a9ef66552825ecd7b494b0f10d03e337951ba9d2c2c400ff53ac4290e990c3bcec933ab81aa5ec21ddec39838b9d31a0e0d69a4fe312f778
+  checksum: a1206313ed1e154aacb64bcb7226cf36f9ac8446e78a4ea74395c9fbddcebcaeb1ecb70921a1c45b3e9bc58fffc4895f36c4d61ee41e214d6d208d1fc10ba558
   languageName: node
   linkType: hard
 
@@ -4765,20 +4765,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hast-to-hyperscript@npm:^10.0.0":
-  version: 10.0.2
-  resolution: "hast-to-hyperscript@npm:10.0.2"
-  dependencies:
-    "@types/unist": ^2.0.0
-    comma-separated-tokens: ^2.0.0
-    property-information: ^6.0.0
-    space-separated-tokens: ^2.0.0
-    style-to-object: ^0.4.0
-    web-namespaces: ^2.0.0
-  checksum: bd8956da35e1972f631e326c4bd22d7ded29ee05cab153918b2cc5646bf09b3d2bba057529e5b1e79736f972b9913a6a8f59fb03bbd9b5c997b528ce0a4949f1
-  languageName: node
-  linkType: hard
-
 "hast-util-from-parse5@npm:^7.0.0":
   version: 7.1.1
   resolution: "hast-util-from-parse5@npm:7.1.1"
@@ -4849,16 +4835,16 @@ __metadata:
   linkType: hard
 
 "hast-util-to-parse5@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "hast-util-to-parse5@npm:7.0.0"
+  version: 7.1.0
+  resolution: "hast-util-to-parse5@npm:7.1.0"
   dependencies:
     "@types/hast": ^2.0.0
-    "@types/parse5": ^6.0.0
-    hast-to-hyperscript: ^10.0.0
+    comma-separated-tokens: ^2.0.0
     property-information: ^6.0.0
+    space-separated-tokens: ^2.0.0
     web-namespaces: ^2.0.0
     zwitch: ^2.0.0
-  checksum: a30ceaca3f456b0a4c8d8330d782d9bcf7e05abe362b2cf208b204afeaef155d580ed84c959c0ef719edeac413e04759000f3e3318816aea41e7841876e5f890
+  checksum: 3a7f2175a3db599bbae7e49ba73d3e5e688e5efca7590ff50130ba108ad649f728402815d47db49146f6b94c14c934bf119915da9f6964e38802c122bcc8af6b
   languageName: node
   linkType: hard
 
@@ -5119,13 +5105,6 @@ __metadata:
   version: 1.3.8
   resolution: "ini@npm:1.3.8"
   checksum: dfd98b0ca3a4fc1e323e38a6c8eb8936e31a97a918d3b377649ea15bdb15d481207a0dda1021efbd86b464cae29a0d33c1d7dcaf6c5672bee17fa849bc50a1b3
-  languageName: node
-  linkType: hard
-
-"inline-style-parser@npm:0.1.1":
-  version: 0.1.1
-  resolution: "inline-style-parser@npm:0.1.1"
-  checksum: 5d545056a3e1f2bf864c928a886a0e1656a3517127d36917b973de581bd54adc91b4bf1febcb0da054f204b4934763f1a4e09308b4d55002327cf1d48ac5d966
   languageName: node
   linkType: hard
 
@@ -8982,15 +8961,6 @@ __metadata:
   bin:
     style-dictionary: bin/style-dictionary.js
   checksum: 51bc2d81c56120dad89a30015736b00325d673f94ce2995644ae5c40c7d27dec06cfbf24a5afb9d7571c202711c7490a1e7bb03426095000b62ca810b8cd5e65
-  languageName: node
-  linkType: hard
-
-"style-to-object@npm:^0.4.0":
-  version: 0.4.0
-  resolution: "style-to-object@npm:0.4.0"
-  dependencies:
-    inline-style-parser: 0.1.1
-  checksum: ad4c2cef5e80c4e981f6747b5c415453b11be5b70c925bc58a69373a7711f6c722a0b11fe9909599b46505329f9e8641c09e7ee5d270be1fe40d7ebdb5b72b81
   languageName: node
   linkType: hard
 
