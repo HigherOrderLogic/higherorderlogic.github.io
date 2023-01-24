@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { githubUsername } = useAppConfig();
-const githubProfileURL = ref(`https://github.com/${githubUsername}`);
+const githubProfileURL = `https://github.com/${githubUsername}`;
 </script>
 
 <template>

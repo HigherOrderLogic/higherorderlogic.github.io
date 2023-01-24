@@ -1,11 +1,9 @@
 <script lang="ts" setup>
 const { githubUsername } = useAppConfig();
 
-const githubAvatarURL = ref(
-  `https://avatars.githubusercontent.com/${githubUsername}`,
-);
-const githubProfileURL = ref(`https://github.com/${githubUsername}`);
-const twitterProfileURL = ref(`https://twitter.com/${githubUsername}`);
+const githubAvatarURL = `https://avatars.githubusercontent.com/${githubUsername}`;
+const githubProfileURL = `https://github.com/${githubUsername}`;
+const twitterProfileURL = `https://twitter.com/${githubUsername}`;
 </script>
 
 <template>
