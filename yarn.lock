@@ -4919,7 +4919,7 @@ __metadata:
     eslint: ^8.31.0
     eslint-config-prettier: ^8.6.0
     eslint-plugin-prettier: ^4.2.1
-    nuxt: 3.1.2
+    nuxt: ^3.1.2
     prettier: ^2.8.2
     reading-time: ^1.5.0
     sass: ^1.57.1
@@ -7004,7 +7004,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nuxt@npm:3.1.2":
+"nuxt@npm:^3.1.2":
   version: 3.1.2
   resolution: "nuxt@npm:3.1.2"
   dependencies:
