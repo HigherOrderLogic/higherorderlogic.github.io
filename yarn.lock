@@ -1700,6 +1700,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/web-bluetooth@npm:^0.0.16":
+  version: 0.0.16
+  resolution: "@types/web-bluetooth@npm:0.0.16"
+  checksum: f68a630d062202a25c46d48686ebae1cf429dc70b4578fcf13b8357b2db63e4aedfb6f6d752bd388366be46ebd19c1c9de45f8a15c2631bb79e904fdfc454f94
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/eslint-plugin@npm:^5.45.1":
   version: 5.52.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.52.0"
@@ -2409,6 +2416,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vueuse/core@npm:^9.13.0":
+  version: 9.13.0
+  resolution: "@vueuse/core@npm:9.13.0"
+  dependencies:
+    "@types/web-bluetooth": ^0.0.16
+    "@vueuse/metadata": 9.13.0
+    "@vueuse/shared": 9.13.0
+    vue-demi: "*"
+  checksum: 2b19d8ec4305f6c65650813c0fa9c15af6b322fc253ad656eb1c4bc8d7617a2ddd46a46d7ea359c4cdc5a5724aa5fc152fa7a3816ed6ebeaec4f7e58defb7153
+  languageName: node
+  linkType: hard
+
 "@vueuse/head@npm:^1.1.9":
   version: 1.1.9
   resolution: "@vueuse/head@npm:1.1.9"
@@ -2420,6 +2439,22 @@ __metadata:
   peerDependencies:
     vue: ">=2.7 || >=3"
   checksum: d306bc954e8e4a33077fef84eff1244157b41e0fb21eb1f0163a206f48f9a102fb018e7281d5154887108bbb6ca227ab29c19bdef874e616a9cb935db34ca47c
+  languageName: node
+  linkType: hard
+
+"@vueuse/metadata@npm:9.13.0":
+  version: 9.13.0
+  resolution: "@vueuse/metadata@npm:9.13.0"
+  checksum: 91e137bf2fb1406587b523edae26b58b315d3a59797c9f2ed5dde9cb707026aa740b86da5955ea7f9662a93ce92249d0b3af763c65449b4a843bbd0725eb67f6
+  languageName: node
+  linkType: hard
+
+"@vueuse/shared@npm:9.13.0":
+  version: 9.13.0
+  resolution: "@vueuse/shared@npm:9.13.0"
+  dependencies:
+    vue-demi: "*"
+  checksum: e53e7312bdd2030b7970afcf4d3dc3f9a47f7721a92ccb51c364d23246233cb54758f7ddacbdb9ac63d1e86ec82e97d06cb53b05a4b8d43be877d16ab61dd9bb
   languageName: node
   linkType: hard
 
@@ -5197,6 +5232,7 @@ __metadata:
     "@nuxt/content": ^2.4.3
     "@nuxt/eslint-config": ^0.1.1
     "@unocss/nuxt": ^0.49.8
+    "@vueuse/core": ^9.13.0
     eslint: ^8.35.0
     eslint-config-prettier: ^8.6.0
     eslint-plugin-prettier: ^4.2.1
@@ -10067,6 +10103,22 @@ __metadata:
   dependencies:
     ufo: ^1.1.0
   checksum: fd619ea47b47942ef8594400162abb7b9a56f4af14777e13ae3d88b7d13417ee69d83def4384dc9bc8adf9c3a57a429e4b9895b42e2b8a54e6016b858c468f40
+  languageName: node
+  linkType: hard
+
+"vue-demi@npm:*":
+  version: 0.13.11
+  resolution: "vue-demi@npm:0.13.11"
+  peerDependencies:
+    "@vue/composition-api": ^1.0.0-rc.1
+    vue: ^3.0.0-0 || ^2.6.0
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+  bin:
+    vue-demi-fix: bin/vue-demi-fix.js
+    vue-demi-switch: bin/vue-demi-switch.js
+  checksum: 0fbe9bf8ab7fe498ffa2bbd0cfc8f6f43a6bbaa5eda3e20ef1b70dca7c8b0ddb216a7ff2f632b694fe0735805638975abb441c621ec0bd2e6d4656353f316c15
   languageName: node
   linkType: hard
 
