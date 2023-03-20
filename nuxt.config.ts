@@ -12,9 +12,11 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/index.scss"],
 
-  modules: ["~/modules/content-transformers", "@nuxt/content", "@unocss/nuxt"],
+  modules: ["@nuxt/content", "@nuxtjs/color-mode", "@unocss/nuxt"],
 
   content: { documentDriven: true },
+
+  colorMode: { classSuffix: "" },
 
   unocss: {
     components: false,
