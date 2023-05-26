@@ -8,6 +8,14 @@
 </template>
 
 <style>
+h1 {
+  --at-apply: "dark:c-gray";
+}
+
+a {
+  --at-apply: "transition-200";
+}
+
 .outer-app-conatainer {
   --at-apply: "font-sans";
 }

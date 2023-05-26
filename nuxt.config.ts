@@ -12,7 +12,12 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/index.scss"],
 
-  modules: ["@nuxt/content", "@nuxtjs/color-mode", "@unocss/nuxt"],
+  modules: [
+    "@nuxt/content",
+    "@nuxt/devtools",
+    "@nuxtjs/color-mode",
+    "@unocss/nuxt",
+  ],
 
   content: { documentDriven: true },
 
@@ -31,6 +36,8 @@ export default defineNuxtConfig({
     ],
     transformers: [transformerDirectives()],
   },
+
+  experimental: { typedPages: true },
 
   typescript: { strict: true },
 });

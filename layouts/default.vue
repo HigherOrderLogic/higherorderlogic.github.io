@@ -24,6 +24,7 @@ const { data: blog } = useAsyncData("is-blog-page", async () => {
     <slot />
     <prose-a
       v-if="route.path !== '/'"
+      class="cd-btn"
       :to="route.path.split('/').slice(0, -1).join('/') || '/'"
       >cd ..</prose-a
     >
@@ -31,11 +32,21 @@ const { data: blog } = useAsyncData("is-blog-page", async () => {
 </template>
 
 <style lang="scss">
+.cd-btn {
+  --at-apply: "dark:c-gray transition-200";
+}
+
 .blog-title {
-  --at-apply: "!mb-0";
+  --at-apply: "!mb-0 dark:c-gray";
 
   + .blog-data {
-    --at-apply: "font-semibold opacity-50";
+    --at-apply: "font-semibold opacity-50 dark:c-white";
+    + * {
+      --at-apply: "dark:c-gray";
+      + * {
+        --at-apply: "dark:c-gray";
+      }
+    }
   }
 }
 </style>

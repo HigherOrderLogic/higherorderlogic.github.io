@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const { githubUsername } = useAppConfig();
 
-const githubAvatarURL = `https://avatars.githubusercontent.com/${githubUsername}`;
 const githubProfileURL = `https://github.com/${githubUsername}`;
+const githubAvatarURL = `${githubProfileURL}.png`;
 const twitterProfileURL = `https://twitter.com/${githubUsername}`;
 </script>
 
@@ -31,13 +31,13 @@ const twitterProfileURL = `https://twitter.com/${githubUsername}`;
 
 <style lang="scss">
 .profile-container {
-  --at-apply: "max-w-100% justify-center flex flex-col";
+  --at-apply: "max-w-100% justify-center flex flex-col dark:c-gray";
 
   .content-container {
     --at-apply: "flex flex-row justify-center";
 
     .github-avatar {
-      --at-apply: "h-50 w-50 rounded-[50%] transition-100";
+      --at-apply: "h-50 w-50 rounded-[50%]";
     }
   }
 

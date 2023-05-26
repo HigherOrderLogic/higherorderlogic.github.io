@@ -43,13 +43,11 @@ function getYear(a: string) {
 
 <style lang="scss">
 .year-index {
-  --at-apply: "!mb-0 !font-bold";
+  --at-apply: "!mb-0 !font-bold dark:c-gray";
 }
 
 .blog-index {
-  * {
-    --at-apply: "transition-200";
-  }
+  --at-apply: "dark:c-gray";
 
   .blog-title {
     --at-apply: "text-[18px]";
