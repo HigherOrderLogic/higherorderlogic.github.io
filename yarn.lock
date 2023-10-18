@@ -1754,7 +1754,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/content@npm:^2.8.2":
+"@nuxt/content@npm:^2.8.5":
   version: 2.8.5
   resolution: "@nuxt/content@npm:2.8.5"
   dependencies:
@@ -1827,7 +1827,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/devtools@npm:^0.8.3":
+"@nuxt/devtools@npm:^0.8.5":
   version: 0.8.5
   resolution: "@nuxt/devtools@npm:0.8.5"
   dependencies:
@@ -2799,7 +2799,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^6.5.0, @typescript-eslint/parser@npm:^6.7.2":
+"@typescript-eslint/parser@npm:^6.5.0, @typescript-eslint/parser@npm:^6.8.0":
   version: 6.8.0
   resolution: "@typescript-eslint/parser@npm:6.8.0"
   dependencies:
@@ -3087,7 +3087,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unocss/nuxt@npm:^0.56.0":
+"@unocss/nuxt@npm:^0.56.5":
   version: 0.56.5
   resolution: "@unocss/nuxt@npm:0.56.5"
   dependencies:
@@ -3651,7 +3651,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:^10.3.0, @vueuse/core@npm:^10.4.1":
+"@vueuse/core@npm:^10.3.0, @vueuse/core@npm:^10.5.0":
   version: 10.5.0
   resolution: "@vueuse/core@npm:10.5.0"
   dependencies:
@@ -5752,7 +5752,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:^5.0.0":
+"eslint-plugin-prettier@npm:^5.0.1":
   version: 5.0.1
   resolution: "eslint-plugin-prettier@npm:5.0.1"
   dependencies:
@@ -5822,7 +5822,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.49.0":
+"eslint@npm:^8.51.0":
   version: 8.51.0
   resolution: "eslint@npm:8.51.0"
   dependencies:
@@ -6929,22 +6929,22 @@ __metadata:
   dependencies:
     "@iconify-json/mdi": ^1.1.54
     "@nuxt-themes/typography": ^1.0.1
-    "@nuxt/content": ^2.8.2
-    "@nuxt/devtools": ^0.8.3
+    "@nuxt/content": ^2.8.5
+    "@nuxt/devtools": ^0.8.5
     "@nuxt/eslint-config": ^0.2.0
-    "@typescript-eslint/parser": ^6.7.2
-    "@unocss/nuxt": ^0.56.0
-    "@vueuse/core": ^10.4.1
-    eslint: ^8.49.0
+    "@typescript-eslint/parser": ^6.8.0
+    "@unocss/nuxt": ^0.56.5
+    "@vueuse/core": ^10.5.0
+    eslint: ^8.51.0
     eslint-config-prettier: ^9.0.0
-    eslint-plugin-prettier: ^5.0.0
-    nuxt: ^3.7.3
+    eslint-plugin-prettier: ^5.0.1
+    nuxt: ^3.7.4
     prettier: ^3.0.3
     reading-time: ^1.5.0
-    sass: ^1.67.0
+    sass: ^1.69.4
     typescript: ^5.2.2
-    unocss: ^0.56.0
-    vue-tsc: ^1.8.11
+    unocss: ^0.56.5
+    vue-tsc: ^1.8.19
   languageName: unknown
   linkType: soft
 
@@ -9677,7 +9677,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nuxt@npm:^3.7.3":
+"nuxt@npm:^3.7.4":
   version: 3.7.4
   resolution: "nuxt@npm:3.7.4"
   dependencies:
@@ -11234,7 +11234,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.67.0":
+"sass@npm:^1.69.4":
   version: 1.69.4
   resolution: "sass@npm:1.69.4"
   dependencies:
@@ -12492,7 +12492,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unocss@npm:0.56.5, unocss@npm:^0.56.0":
+"unocss@npm:0.56.5, unocss@npm:^0.56.5":
   version: 0.56.5
   resolution: "unocss@npm:0.56.5"
   dependencies:
@@ -13172,7 +13172,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-tsc@npm:^1.8.11":
+"vue-tsc@npm:^1.8.19":
   version: 1.8.19
   resolution: "vue-tsc@npm:1.8.19"
   dependencies:
