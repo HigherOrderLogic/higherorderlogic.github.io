@@ -1,5 +1,6 @@
 {
   "extends": ["@nuxt/eslint-config", "plugin:prettier/recommended"],
+  "plugins": ["@stylistic/eslint-plugin"],
   "overrides": [
     {
       "files": ["components/**/*.vue"],
