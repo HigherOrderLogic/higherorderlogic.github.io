@@ -6,6 +6,9 @@ on:
       - master
   pull_request:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number || github.sha }}
+
 jobs:
   linting:
     name: Linting
