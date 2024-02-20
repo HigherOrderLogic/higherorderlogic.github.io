@@ -1,24 +1,27 @@
-// @ts-expect-error
 import { defineTransformer } from "@nuxt/content/transformers/utils";
 import readingTime from "reading-time";
 
-import type { ParsedContent } from "@nuxt/content/dist/runtime/types";
+import type {
+  ParsedContent,
+  MarkdownRoot,
+  MarkdownNode,
+} from "@nuxt/content/dist/runtime/types";
 
-interface ContentExcerpt {
-  type: "text" | "element" | "root";
-  value?: string;
-  children?: ContentExcerpt[];
+function parseMarkdownNode(node: MarkdownNode) {
+  let content = "";
+  if (node.type === "text") {
+    content += node.value || "";
+  }
+  for (const child of node.children || []) {
+    content += parseMarkdownNode(child);
+  }
+  return content;
 }
 
-function parseContentExcerpt(child: ContentExcerpt) {
+function parseContentExcerpt(excerpt: MarkdownRoot) {
   let content = "";
-  if (child.value && child.type === "text") {
-    content += child.value;
-  }
-  if (child.children && child.children.length > 0) {
-    child.children.forEach((c) => {
-      content += parseContentExcerpt(c);
-    });
+  for (const node of excerpt.children) {
+    content += parseMarkdownNode(node);
   }
   return content;
 }
@@ -32,9 +35,7 @@ export default defineTransformer({
       const { minutes: readTime } = readingTime(
         parseContentExcerpt(content.excerpt),
       );
-      if (readTime > 1) {
-        content.readTime = `${Math.ceil(readTime)} mins read`;
-      }
+      content.readTime = `${Math.max(Math.ceil(readTime), 1)} mins read`;
     }
     return content;
   },

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { IBlog } from "~/types";
+import type { IBlog } from "~/types";
 
 const { data: blogs } = await useAsyncData(
   "blogs-list",

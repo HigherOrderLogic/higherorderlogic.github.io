@@ -4,11 +4,13 @@
   "scripts": {
     "lint": "eslint . --ext .ts,.vue --fix",
     "format": "prettier \"./**/*.{ts,vue,scss}\" --write",
+    "prepare": "nuxt prepare",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "typecheck": "nuxt typecheck",
+    "postinstall": "yarn prepare"
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.64",
