@@ -24,9 +24,7 @@ jobs:
       - name: Install dependencies
         run: yarn --immutable
       - name: Run Eslint
-        run: yarn run lint --fix=false
-      - name: Run Prettier
-        run: yarn run format --write=false --check
+        run: yarn run lint
 
   typecheck:
     name: Typecheck

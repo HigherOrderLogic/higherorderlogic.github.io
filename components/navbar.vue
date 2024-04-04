@@ -1,23 +1,29 @@
 <script lang="ts" setup>
-const { githubUsername } = useAppConfig();
-const githubProfileURL = `https://github.com/${githubUsername}`;
+const { githubUsername } = useAppConfig()
+const githubProfileURL = `https://github.com/${githubUsername}`
 </script>
 
 <template>
   <div class="navbar">
-    <nuxt-link to="/"><p>Home</p></nuxt-link>
-    <nuxt-link to="/blog"><p>Blog</p></nuxt-link>
+    <nuxt-link to="/">
+      <p>Home</p>
+    </nuxt-link>
+    <nuxt-link to="/blog">
+      <p>Blog</p>
+    </nuxt-link>
     <nuxt-link :href="githubProfileURL" target="_blank" rel="noopener">
       <div class="i-mdi-github" />
     </nuxt-link>
     <button
       @click="
-        $colorMode.preference =
-          $colorMode.preference === 'dark' ? 'light' : 'dark'
-      ">
+        $colorMode.preference
+          = $colorMode.preference === 'dark' ? 'light' : 'dark'
+      "
+    >
       <div
         v-if="$colorMode.preference === 'light'"
-        class="i-mdi-weather-sunny" />
+        class="i-mdi-weather-sunny"
+      />
       <div v-else class="i-mdi-weather-night" />
     </button>
   </div>

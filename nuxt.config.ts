@@ -3,20 +3,20 @@ import {
   presetUno,
   presetWebFonts,
   transformerDirectives,
-} from "unocss";
+} from 'unocss'
 
 export default defineNuxtConfig({
-  extends: "@nuxt-themes/typography",
+  extends: '@nuxt-themes/typography',
 
-  appConfig: { githubUsername: "HigherOrderLogic", altName: "Horu" },
+  appConfig: { githubUsername: 'HigherOrderLogic', altName: 'Horu' },
 
-  css: ["~/assets/css/index.scss"],
+  css: ['~/assets/css/index.scss'],
 
-  modules: ["@nuxt/content", "@nuxtjs/color-mode", "@unocss/nuxt"],
+  modules: ['@nuxt/content', '@nuxtjs/color-mode', '@unocss/nuxt'],
 
   content: { documentDriven: true },
 
-  colorMode: { classSuffix: "" },
+  colorMode: { classSuffix: '' },
 
   unocss: {
     components: false,
@@ -25,7 +25,7 @@ export default defineNuxtConfig({
       presetUno(),
       presetWebFonts({
         fonts: {
-          sans: "Open Sans",
+          sans: 'Open Sans',
         },
       }),
     ],
@@ -35,4 +35,4 @@ export default defineNuxtConfig({
   experimental: { typedPages: true },
 
   typescript: { strict: true },
-});
+})

@@ -1,22 +1,25 @@
 <script lang="ts" setup>
-import type { IBlog } from "~/types";
+import type { IBlog } from '~/types'
 
-const route = useRoute();
+const route = useRoute()
 
-const { data: blog } = useAsyncData("is-blog-page", async () => {
-  const matches = route.path.match(/^\/blog\/[a-z\-#]+\/?$/) || [];
-  let blog = null;
+const { data: blog } = useAsyncData('is-blog-page', async () => {
+  const matches = route.path.match(/^\/blog\/[a-z\-#]+\/?$/) || []
+  let blog = null
   if ((matches.length || 0) > 0) {
-    blog = await queryContent<IBlog>(route.path).findOne();
+    blog = await queryContent<IBlog>(route.path).findOne()
   }
-  return blog;
-});
+
+  return blog
+})
 </script>
 
 <template>
   <div>
-    <template v-if="blog && (blog.title.length || 0) > 0"
-      ><prose-h1 id="title" class="blog-title">{{ blog.title }}</prose-h1>
+    <template v-if="blog && (blog.title.length || 0) > 0">
+      <prose-h1 id="title" class="blog-title">
+        {{ blog.title }}
+      </prose-h1>
       <div class="blog-data">
         {{ `${useFormattedDate(blog.date)} · ${blog.readTime}` }}
       </div>
@@ -26,8 +29,9 @@ const { data: blog } = useAsyncData("is-blog-page", async () => {
       v-if="route.path !== '/'"
       class="cd-btn"
       :to="route.path.split('/').slice(0, -1).join('/') || '/'"
-      >cd ..</prose-a
     >
+      cd ..
+    </prose-a>
   </div>
 </template>
 

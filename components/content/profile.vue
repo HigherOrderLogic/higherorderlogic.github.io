@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-const { githubUsername } = useAppConfig();
+const { githubUsername } = useAppConfig()
 
-const githubProfileURL = `https://github.com/${githubUsername}`;
-const githubAvatarURL = `${githubProfileURL}.png`;
-const twitterProfileURL = `https://twitter.com/${githubUsername}`;
+const githubProfileURL = `https://github.com/${githubUsername}`
+const githubAvatarURL = `${githubProfileURL}.png`
+const twitterProfileURL = `https://twitter.com/${githubUsername}`
 </script>
 
 <template>
@@ -14,17 +14,19 @@ const twitterProfileURL = `https://twitter.com/${githubUsername}`;
       </nuxt-link>
     </div>
     <div class="content-container social-links-container">
-      <prose-a :href="githubProfileURL" target="_blank" rel="noopener"
-        >Github</prose-a
-      >
-      <prose-a :href="twitterProfileURL" target="_blank" rel="noopener"
-        >Twitter</prose-a
-      >
+      <prose-a :href="githubProfileURL" target="_blank" rel="noopener">
+        Github
+      </prose-a>
+      <prose-a :href="twitterProfileURL" target="_blank" rel="noopener">
+        Twitter
+      </prose-a>
     </div>
     <div class="content-container">
-      <prose-p>{{
-        `Hey, I'm ${githubUsername}. You can call me Horu!`
-      }}</prose-p>
+      <prose-p>
+        {{
+          `Hey, I'm ${githubUsername}. You can call me Horu!`
+        }}
+      </prose-p>
     </div>
   </div>
 </template>

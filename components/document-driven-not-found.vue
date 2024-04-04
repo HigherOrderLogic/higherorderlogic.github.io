@@ -1,6 +1,9 @@
 <template>
-  <prose-h1 id="404" class="not-found-header">404</prose-h1
-  ><prose-p class="not-found-msg">Uh oh, this page can't be found.</prose-p>
+  <prose-h1 id="404" class="not-found-header">
+    404
+  </prose-h1><prose-p class="not-found-msg">
+    Uh oh, this page can't be found.
+  </prose-p>
 </template>
 
 <style>
