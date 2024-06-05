@@ -1,7 +1,6 @@
 import {
   presetIcons,
   presetUno,
-  presetWebFonts,
   transformerDirectives,
 } from 'unocss'
 
@@ -14,23 +13,18 @@ export default defineNuxtConfig({
 
   modules: ['@nuxt/content', '@nuxtjs/color-mode', '@unocss/nuxt'],
 
-  content: { documentDriven: true },
-
   colorMode: { classSuffix: '' },
 
   unocss: {
     components: false,
     presets: [
-      presetIcons(),
       presetUno(),
-      presetWebFonts({
-        fonts: {
-          sans: 'Open Sans',
-        },
-      }),
+      presetIcons(),
     ],
     transformers: [transformerDirectives()],
   },
+
+  ssr: false,
 
   experimental: { typedPages: true },
 

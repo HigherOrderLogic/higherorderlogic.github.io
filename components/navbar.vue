@@ -4,7 +4,7 @@ const githubProfileURL = `https://github.com/${githubUsername}`
 </script>
 
 <template>
-  <div class="navbar">
+  <nav class="navbar">
     <nuxt-link to="/">
       <p>Home</p>
     </nuxt-link>
@@ -26,7 +26,7 @@ const githubProfileURL = `https://github.com/${githubUsername}`
       />
       <div v-else class="i-mdi-weather-night" />
     </button>
-  </div>
+  </nav>
 </template>
 
 <style lang="scss">

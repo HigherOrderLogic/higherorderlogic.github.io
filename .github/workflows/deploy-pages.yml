@@ -36,7 +36,7 @@ jobs:
       - name: Install dependencies
         run: yarn --immutable
       - name: Build page
-        run: yarn generate
+        run: yarn run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

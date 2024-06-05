@@ -8,6 +8,7 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.sha }}
+  cancel-in-progress: ${{ github.event_name != 'push' }}
 
 jobs:
   linting:
@@ -42,7 +43,7 @@ jobs:
         run: yarn --immutable
       - name: Run typechecking
         continue-on-error: true
-        run: yarn typecheck
+        run: yarn run typecheck
 
   building:
     name: Building
@@ -65,4 +66,4 @@ jobs:
       - name: Install dependencies
         run: yarn --immutable
       - name: Building
-        run: yarn run generate
+        run: yarn run build
