@@ -3,14 +3,14 @@
     <content-doc>
       <template #default="{ doc }">
         <template v-if="$route.params.slug">
-        <prose-h1 id="title" class="blog-title">
-        {{ doc.title }}
-      </prose-h1>
-      <div class="blog-data">
-        {{ `${useFormattedDate(doc.date)} · ${doc.readTime}` }}
-      </div>
-    </template>
-      <content-renderer :value="doc" />
+          <prose-h1 id="title" class="blog-title">
+            {{ doc.title }}
+          </prose-h1>
+          <div class="blog-data">
+            {{ `${useFormattedDate(doc.date)} · ${doc.readTime}` }}
+          </div>
+        </template>
+        <content-renderer :value="doc" />
       </template>
       <template #not-found>
         <content-not-found />
