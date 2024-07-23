@@ -7350,7 +7350,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^9.0.0":
+"eslint@npm:^9.7.0":
   version: 9.7.0
   resolution: "eslint@npm:9.7.0"
   dependencies:
@@ -8329,7 +8329,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:^7.17.0"
     "@unocss/nuxt": "npm:^0.58.9"
     "@vueuse/core": "npm:^10.11.0"
-    eslint: "npm:^9.0.0"
+    eslint: "npm:^9.7.0"
     nuxt: "npm:^3.12.4"
     reading-time: "npm:^1.5.0"
     sass: "npm:^1.77.8"
