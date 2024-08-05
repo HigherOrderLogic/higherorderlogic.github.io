@@ -21,7 +21,7 @@
     "@nuxt/content": "^2.13.2",
     "@nuxt/eslint-config": "^0.3.0",
     "@stylistic/eslint-plugin": "^2.3.0",
-    "@typescript-eslint/parser": "^7.17.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "@unocss/nuxt": "^0.61.0",
     "@vueuse/core": "^10.11.0",
     "eslint": "^9.7.0",
