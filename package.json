@@ -15,7 +15,7 @@
     "postinstall": "yarn prepare"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.23.2",
+    "@antfu/eslint-config": "^3.0.0",
     "@iconify-json/mdi": "^1.1.67",
     "@nuxt-themes/typography": "^1.0.1",
     "@nuxt/content": "^2.13.2",
