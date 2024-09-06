@@ -1,38 +1,32 @@
-import {
-  presetIcons,
-  presetUno,
-  presetWebFonts,
-  transformerDirectives,
-} from 'unocss'
-
 export default defineNuxtConfig({
-  extends: '@nuxt-themes/typography',
-
-  appConfig: { githubUsername: 'HigherOrderLogic', altName: 'Horu' },
-
-  css: ['~/assets/css/index.scss'],
-
-  modules: ['@nuxt/content', '@nuxtjs/color-mode', '@unocss/nuxt'],
-
-  content: { documentDriven: true },
-
-  colorMode: { classSuffix: '' },
-
-  unocss: {
-    components: false,
-    presets: [
-      presetIcons(),
-      presetUno(),
-      presetWebFonts({
-        fonts: {
-          sans: 'Open Sans',
-        },
-      }),
-    ],
-    transformers: [transformerDirectives()],
+  future: {
+    compatibilityVersion: 4,
   },
 
-  experimental: { typedPages: true },
+  typescript: {
+    strict: true,
+  },
 
-  typescript: { strict: true },
+  css: ['@fontsource-variable/inter'],
+
+  modules: ['@nuxt/content', '@nuxtjs/color-mode', '@unocss/nuxt', '@nuxt/image', '@nuxt/eslint'],
+
+  devtools: {
+    enabled: true,
+  },
+
+  eslint: {
+    config: {
+      standalone: false,
+    },
+  },
+
+  unocss: {
+    preflight: true,
+    components: false,
+  },
+
+  colorMode: {
+    classPrefix: '__',
+  },
 })
