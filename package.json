@@ -9,6 +9,7 @@
     "dev": "nuxt dev",
     "build": "nuxt build",
     "generate": "nuxt generate",
+    "typecheck": "nuxt typecheck",
     "lint": "eslint ."
   },
   "devDependencies": {
