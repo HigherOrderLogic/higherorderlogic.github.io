@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  check-deploy:
+  should-deploy:
     name: Check if should deploy page
     runs-on: ubuntu-lastest
     if: github.event_name == 'push' || contains(github.ref, '/heads/master')
@@ -75,7 +75,7 @@ jobs:
       - name: Building
         run: yarn run generate
       - name: Upload artifact
-        if: ${{ steps.check-deploy.outputs.deploy }}
+        if: ${{ steps.should-deploy.outputs.deploy }}
         uses: actions/upload-pages-artifact@v3
         with:
           path: .output/public
@@ -85,8 +85,7 @@ jobs:
     runs-on: ubuntu-lastest
     needs:
       - build
-      - check-deploy
-    if: ${{ needs.check-deploy.outputs.deploy }}
+      - should-deploy
     steps:
       - name: Deploy artifact to GitHub Pages
         uses: actions/deploy-pages@v4
