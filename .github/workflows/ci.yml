@@ -83,7 +83,7 @@ jobs:
   deploy-pages:
     name: Deploy pages
     runs-on: ubuntu-lastest
-    needs: 
+    needs:
       - build
       - check-deploy
     if: ${{ needs.check-deploy.outputs.deploy }}
