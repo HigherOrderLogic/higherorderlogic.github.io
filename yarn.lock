@@ -1222,7 +1222,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iconify/types@npm:^2.0.0":
+"@iconify/json@npm:^2.2.245":
+  version: 2.2.245
+  resolution: "@iconify/json@npm:2.2.245"
+  dependencies:
+    "@iconify/types": "npm:*"
+    pathe: "npm:^1.1.2"
+  checksum: 10c0/b7d8dff740f573d75267373b10fc2169e730f431b514067d8af592180e0c469a9fd152ea7ca5cc6e58fc35c4d4736476e3df0b7a851c5b73f28dca80d18751bd
+  languageName: node
+  linkType: hard
+
+"@iconify/types@npm:*, @iconify/types@npm:^2.0.0":
   version: 2.0.0
   resolution: "@iconify/types@npm:2.0.0"
   checksum: 10c0/65a3be43500c7ccacf360e136d00e1717f050b7b91da644e94370256ac66f582d59212bdb30d00788aab4fc078262e91c95b805d1808d654b72f6d2072a7e4b2
@@ -6487,6 +6497,7 @@ __metadata:
   dependencies:
     "@antfu/eslint-config": "npm:^3.0.0"
     "@fontsource-variable/inter": "npm:^5.0.20"
+    "@iconify/json": "npm:^2.2.245"
     "@nuxt/content": "npm:^2.13.2"
     "@nuxt/eslint": "npm:^0.5.5"
     "@nuxt/image": "npm:^1.8.0"

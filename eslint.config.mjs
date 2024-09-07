@@ -34,6 +34,6 @@ export default withNuxt(antfu({
 }, {
   files: ['**/*.md'],
   rules: {
-    'style/max-len': 'warn',
+    'style/max-len': 'off',
   },
 }))
