@@ -1,6 +1,7 @@
 {
   "name": "horu.me",
   "type": "module",
+  "private": "true",
   "packageManager": "yarn@4.4.1",
   "license": "MIT",
   "scripts": {
