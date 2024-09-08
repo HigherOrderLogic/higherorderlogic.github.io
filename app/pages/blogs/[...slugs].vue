@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const ContentNotFound = defineComponent({
   setup() {
-    throw createError({
+    showError({
       statusCode: 404,
-      statusMessage: 'No blog found',
+      statusMessage: 'Blog not found',
     })
   },
 })
@@ -13,10 +13,10 @@ const ContentNotFound = defineComponent({
   <content-doc>
     <template #default="{ doc }">
       <h1>{{ doc.title }}</h1>
+      <p>{{ useDateFormat(doc.date, 'ddd, DD MMM YYYY') }}</p>
       <content-renderer :value="doc" />
     </template>
     <template #not-found>
-      <!-- @vue-expect-error component for throwing errors only -->
       <content-not-found />
     </template>
   </content-doc>

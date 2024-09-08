@@ -1,10 +1,25 @@
-import { defineConfig, presetIcons, presetTypography, presetUno, transformerDirectives } from 'unocss'
+import {
+  defineConfig,
+  presetIcons,
+  presetTypography,
+  presetUno,
+  transformerDirectives,
+  transformerVariantGroup,
+} from 'unocss'
 
 export default defineConfig({
   presets: [
     presetIcons(),
     presetTypography(),
-    presetUno(),
+    presetUno({
+      dark: {
+        dark: '.dark-mode',
+        light: '.light-mode',
+      },
+    }),
   ],
-  transformers: [transformerDirectives()],
+  transformers: [
+    transformerDirectives(),
+    transformerVariantGroup(),
+  ],
 })

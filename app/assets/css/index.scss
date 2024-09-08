@@ -1,0 +1,11 @@
+html {
+    &.dark-mode {
+        --at-apply: "bg-#050505"
+    }
+}
+
+.prose {
+    a {
+        --at-apply: "hover:underline-dashed";
+    }
+}

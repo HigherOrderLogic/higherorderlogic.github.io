@@ -7,9 +7,18 @@ export default defineNuxtConfig({
     strict: true,
   },
 
-  css: ['@fontsource-variable/inter'],
+  css: ['@fontsource-variable/inter', '~/assets/css/index.scss'],
 
-  modules: ['@nuxt/content', '@nuxtjs/color-mode', '@unocss/nuxt', '@nuxt/image', '@nuxt/eslint'],
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      title: 'Horu.me',
+      htmlAttrs: { lang: 'en' },
+    },
+  },
+
+  modules: ['@nuxt/content', '@nuxtjs/color-mode', '@unocss/nuxt', '@nuxt/image', '@nuxt/eslint', '@vueuse/nuxt'],
 
   devtools: {
     enabled: true,
@@ -24,9 +33,5 @@ export default defineNuxtConfig({
   unocss: {
     preflight: true,
     components: false,
-  },
-
-  colorMode: {
-    classPrefix: '__',
   },
 })

@@ -1,7 +1,14 @@
+<script setup lang="ts">
+const { statusCode = 404, statusMessage = 'Page not found' } = useError().value
+</script>
+
 <template>
   <nuxt-layout>
-    <div>
-      404, is this an error?
-    </div>
+    <h1>
+      {{ statusCode }}
+    </h1>
+    <p>
+      {{ statusMessage }}
+    </p>
   </nuxt-layout>
 </template>
