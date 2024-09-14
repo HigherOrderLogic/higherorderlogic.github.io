@@ -14,9 +14,16 @@ jobs:
   should-deploy:
     name: Check if should deploy page
     runs-on: ubuntu-lastest
-    if: github.event_name == 'push' || contains(github.ref, '/heads/master')
+    outputs:
+      deploy: ${{ steps.check.outputs.deploy }}
+    env:
+      DEPLOY: ${{ github.event_name == 'push' || contains(github.ref, '/heads/master') }}
     steps:
+      - run: echo $DEPLOY
+
       - name: Write output
+        id: check
+        if: github.event_name == 'push' || contains(github.ref, '/heads/master')
         run: echo "deploy=true" >> "$GITHUB_OUTPUT"
 
   lint:
@@ -56,7 +63,9 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    needs: lint
+    needs: 
+      - lint
+      - should-deploy
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -75,7 +84,7 @@ jobs:
       - name: Building
         run: yarn run generate
       - name: Upload artifact
-        if: ${{ steps.should-deploy.outputs.deploy }}
+        if: ${{ needs.should-deploy.outputs.deploy }}
         uses: actions/upload-pages-artifact@v3
         with:
           path: .output/public
@@ -86,6 +95,7 @@ jobs:
     needs:
       - build
       - should-deploy
+    if: ${{ needs.should-deploy.outputs.deploy }}
     steps:
       - name: Deploy artifact to GitHub Pages
         uses: actions/deploy-pages@v4
