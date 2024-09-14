@@ -12,12 +12,6 @@
       <nuxt-link to="/blogs">
         Blogs
       </nuxt-link>
-      <nuxt-link to="/projects">
-        Projects
-      </nuxt-link>
-      <nuxt-link to="/resumes">
-        Resumes
-      </nuxt-link>
       <theme-toggle />
     </nav>
   </header>

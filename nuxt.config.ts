@@ -18,7 +18,15 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/content', '@nuxtjs/color-mode', '@unocss/nuxt', '@nuxt/image', '@nuxt/eslint', '@vueuse/nuxt'],
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/color-mode',
+    '@unocss/nuxt',
+    '@nuxt/image',
+    '@nuxt/eslint',
+    '@vueuse/nuxt',
+    '@vite-pwa/nuxt',
+  ],
 
   devtools: {
     enabled: true,
@@ -33,5 +41,20 @@ export default defineNuxtConfig({
   unocss: {
     preflight: true,
     components: false,
+  },
+
+  pwa: {
+    registerType: 'autoUpdate',
+    workbox: {
+      navigateFallback: '/',
+      globPatterns: ['**/*.{js,css,html,woff2}', 'api/**/*.json'],
+    },
+    manifest: {
+      background_color: '#FFF',
+      display: 'minimal-ui',
+      lang: 'en',
+      orientation: 'portrait-primary',
+      shortcuts: [{ name: 'Blogs', url: '/blogs' }],
+    },
   },
 })

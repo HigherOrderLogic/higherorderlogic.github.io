@@ -78,7 +78,7 @@ jobs:
         if: ${{ steps.should-deploy.outputs.deploy }}
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: .output/public
 
   deploy-pages:
     name: Deploy pages
