@@ -1,5 +1,11 @@
 <template>
-  <h1>
-    Hello!
-  </h1>
+  <div>
+    <h1>
+      Hello!
+    </h1>
+    <p>
+      <!-- eslint-disable-next-line vue/singleline-html-element-content-newline -->
+      I'm <nuxt-link to="https://github.com/HigherOrderLogic">HigherOrderLogic</nuxt-link>.
+    </p>
+  </div>
 </template>
