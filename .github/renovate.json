@@ -4,14 +4,13 @@
     "config:base",
     "schedule:weekly",
     "group:allNonMajor",
-    ":maintainLockFilesWeekly",
     ":rebaseStalePrs",
     ":semanticCommits"
   ],
   "labels": ["dependencies"],
   "packageRules": [
     {
-      "matchUpdateTypes": ["patch", "lockFileMaintenance"],
+      "matchUpdateTypes": ["patch"],
       "automerge": true
     }
   ]

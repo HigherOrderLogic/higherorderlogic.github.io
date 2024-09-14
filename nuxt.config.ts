@@ -1,38 +1,60 @@
-import {
-  presetIcons,
-  presetUno,
-  presetWebFonts,
-  transformerDirectives,
-} from 'unocss'
-
 export default defineNuxtConfig({
-  extends: '@nuxt-themes/typography',
-
-  appConfig: { githubUsername: 'HigherOrderLogic', altName: 'Horu' },
-
-  css: ['~/assets/css/index.scss'],
-
-  modules: ['@nuxt/content', '@nuxtjs/color-mode', '@unocss/nuxt'],
-
-  content: { documentDriven: true },
-
-  colorMode: { classSuffix: '' },
-
-  unocss: {
-    components: false,
-    presets: [
-      presetIcons(),
-      presetUno(),
-      presetWebFonts({
-        fonts: {
-          sans: 'Open Sans',
-        },
-      }),
-    ],
-    transformers: [transformerDirectives()],
+  future: {
+    compatibilityVersion: 4,
   },
 
-  experimental: { typedPages: true },
+  typescript: {
+    strict: true,
+  },
 
-  typescript: { strict: true },
+  css: ['@fontsource-variable/inter', '~/assets/css/index.scss'],
+
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      title: 'Horu.me',
+      htmlAttrs: { lang: 'en' },
+    },
+  },
+
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/color-mode',
+    '@unocss/nuxt',
+    '@nuxt/image',
+    '@nuxt/eslint',
+    '@vueuse/nuxt',
+    '@vite-pwa/nuxt',
+  ],
+
+  devtools: {
+    enabled: true,
+  },
+
+  eslint: {
+    config: {
+      standalone: false,
+    },
+  },
+
+  unocss: {
+    preflight: true,
+    components: false,
+  },
+
+  pwa: {
+    registerType: 'autoUpdate',
+    workbox: {
+      navigateFallback: '/',
+      globPatterns: ['**/*.{js,css,html,woff2}', 'api/**/*.json'],
+    },
+    manifest: {
+      background_color: '#FFF',
+      display: 'minimal-ui',
+      lang: 'en',
+      orientation: 'portrait-primary',
+      shortcuts: [{ name: 'Blogs', url: '/blogs' }],
+    },
+  },
 })

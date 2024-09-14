@@ -1,6 +1,9 @@
+// @ts-check
 import antfu from '@antfu/eslint-config'
 
-export default antfu({
+import withNuxt from './.nuxt/eslint.config.mjs'
+
+export default withNuxt(antfu({
   rules: {
     'curly': ['error', 'all'],
     'no-console': 'warn',
@@ -31,6 +34,6 @@ export default antfu({
 }, {
   files: ['**/*.md'],
   rules: {
-    'style/max-len': 'warn',
+    'style/max-len': 'off',
   },
-})
+}))

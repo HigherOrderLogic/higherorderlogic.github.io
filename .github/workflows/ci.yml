@@ -8,10 +8,19 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.sha }}
+  cancel-in-progress: true
 
 jobs:
-  linting:
-    name: Linting
+  should-deploy:
+    name: Check if should deploy page
+    runs-on: ubuntu-lastest
+    if: github.event_name == 'push' || contains(github.ref, '/heads/master')
+    steps:
+      - name: Write output
+        run: echo "deploy=true" >> "$GITHUB_OUTPUT"
+
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,7 +38,7 @@ jobs:
   typecheck:
     name: Typecheck
     runs-on: ubuntu-latest
-    needs: linting
+    needs: lint
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,13 +51,12 @@ jobs:
         run: yarn --immutable
       - name: Run typechecking
         continue-on-error: true
-        run: yarn typecheck
+        run: yarn run typecheck
 
-  building:
-    name: Building
+  build:
+    name: Build
     runs-on: ubuntu-latest
-    needs: linting
-    if: github.event_name != 'push' || !contains(github.ref, '/heads/master')
+    needs: lint
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -66,3 +74,18 @@ jobs:
         run: yarn --immutable
       - name: Building
         run: yarn run generate
+      - name: Upload artifact
+        if: ${{ steps.should-deploy.outputs.deploy }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .output/public
+
+  deploy-pages:
+    name: Deploy pages
+    runs-on: ubuntu-lastest
+    needs:
+      - build
+      - should-deploy
+    steps:
+      - name: Deploy artifact to GitHub Pages
+        uses: actions/deploy-pages@v4
