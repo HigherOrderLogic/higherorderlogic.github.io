@@ -7,6 +7,7 @@
     ":rebaseStalePrs",
     ":semanticCommits"
   ],
+  "rangeStrategy": "bump",
   "labels": ["dependencies"],
   "packageRules": [
     {
