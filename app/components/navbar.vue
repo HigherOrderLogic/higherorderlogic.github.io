@@ -4,11 +4,11 @@
       <img
         src="https://github.com/HigherOrderLogic.png"
         alt="Logo"
-        class="border-rd-full w-12 h-a dark:(outline-#f5f5f5 outline-solid)"
+        class="border-rd-full w-12 h-a dark:(outline-white outline-solid)"
       >
     </nuxt-link>
     <div class="w-full" />
-    <nav class="flex flex-items-center gap-4 dark:text-#f5f5f5">
+    <nav class="flex flex-items-center gap-4 text-[--un-prose-links]">
       <nuxt-link to="/blogs">
         Blogs
       </nuxt-link>

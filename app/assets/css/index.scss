@@ -1,5 +1,3 @@
-html {
-    &.dark-mode {
-        --at-apply: "bg-#050505"
-    }
+html.dark-mode {
+    --at-apply: "bg-black"
 }
