@@ -75,10 +75,13 @@ jobs:
 
   deploy-pages:
     name: Deploy pages
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     needs:
       - build
     if: ${{ github.event_name == 'push' || contains(github.ref, '/heads/master') }}
+    permissions:
+      id-token: write
+      pages: write
     steps:
       - name: Deploy artifact to GitHub Pages
         uses: actions/deploy-pages@v4
