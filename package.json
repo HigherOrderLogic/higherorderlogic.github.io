@@ -21,6 +21,7 @@
     "@nuxt/image": "^1.8.0",
     "@nuxtjs/color-mode": "^3.5.1",
     "@types/eslint": "^9.6.1",
+    "@unocss/eslint-plugin": "^0.63.4",
     "@unocss/nuxt": "^0.62.3",
     "@vite-pwa/nuxt": "^0.10.5",
     "@vueuse/nuxt": "^11.0.3",

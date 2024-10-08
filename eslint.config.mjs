@@ -4,6 +4,10 @@ import antfu from '@antfu/eslint-config'
 import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt(antfu({
+  unocss: {
+    attributify: false,
+  },
+}, {
   rules: {
     'curly': ['error', 'all'],
     'no-console': 'warn',

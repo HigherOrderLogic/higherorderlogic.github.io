@@ -1,14 +1,14 @@
 <template>
-  <header class="block p-4 flex">
+  <header class="block flex p-4">
     <nuxt-link to="/">
       <img
         src="https://github.com/HigherOrderLogic.png"
         alt="Logo"
-        class="border-rd-full w-12 h-a dark:(outline-white outline-solid)"
+        class="h-a w-12 border-rd-full dark:(outline-white outline-solid)"
       >
     </nuxt-link>
     <div class="w-full" />
-    <nav class="flex flex-items-center gap-4 text-[--un-prose-links]">
+    <nav class="flex gap-4 flex-items-center text-[--un-prose-links]">
       <nuxt-link to="/blogs">
         Blogs
       </nuxt-link>
