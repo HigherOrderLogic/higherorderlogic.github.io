@@ -15,7 +15,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^3.7.3",
     "@fontsource-variable/inter": "^5.1.0",
-    "@iconify/json": "^2.2.257",
+    "@iconify/json": "^2.2.259",
     "@nuxt/content": "^2.13.2",
     "@nuxt/eslint": "^0.5.7",
     "@nuxt/image": "^1.8.1",
@@ -27,8 +27,8 @@
     "@vueuse/nuxt": "^11.1.0",
     "eslint": "^9.12.0",
     "nuxt": "^3.13.2",
-    "sass-embedded": "^1.79.4",
-    "typescript": "^5.6.2",
+    "sass-embedded": "^1.79.5",
+    "typescript": "^5.6.3",
     "vue-tsc": "^2.1.6"
   }
 }
