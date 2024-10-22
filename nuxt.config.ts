@@ -21,6 +21,7 @@ export default defineNuxtConfig({
       meta: [
         { name: 'apple-mobile-web-app-title', content: NAME },
         { name: 'application-name', content: NAME },
+        { name: 'description', content: DESCRIPTION },
         { name: 'twitter:title', content: NAME },
         { name: 'twitter:description', content: DESCRIPTION },
         { name: 'twitter:card', content: 'summary' },
