@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { statusCode = 404, statusMessage = 'Page not found' } = useError().value
+const { statusCode = 404, statusMessage = 'Page not found' } = useError().value ?? {}
 </script>
 
 <template>
