@@ -12,8 +12,12 @@ const ContentNotFound = defineComponent({
 <template>
   <content-doc>
     <template #default="{ doc }">
-      <h1>{{ doc.title }}</h1>
-      <p>{{ useDateFormat(doc.date, 'ddd, DD MMM YYYY') }}</p>
+      <div class="pb-4">
+        <h1>{{ doc.title }}</h1>
+        <p class="op-70">
+          {{ useDateFormat(doc.date, 'ddd, DD MMM YYYY') }}
+        </p>
+      </div>
       <content-renderer :value="doc" />
     </template>
     <template #not-found>
