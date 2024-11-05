@@ -19,7 +19,7 @@ useHead({ title: 'Blogs' })
                 {{ blog.title }}
               </nuxt-link>
             </h3>
-            <p class="my-0 op-70 md:(m-a flex-shrink-1)">
+            <p class="my-0 op-70 md:m-a">
               {{ useDateFormat(blog.date, 'DD MMM YYYY') }}
             </p>
           </div>
