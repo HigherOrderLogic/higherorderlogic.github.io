@@ -12,6 +12,7 @@ export default withNuxt(antfu({
     'curly': ['error', 'all'],
     'no-console': 'warn',
 
+    'style/brace-style': ['error', '1tbs'],
     'style/max-len': ['error', { code: 120 }],
 
     'vue/component-name-in-template-casing': ['error', 'kebab-case'],

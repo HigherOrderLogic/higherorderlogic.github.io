@@ -14,7 +14,7 @@
 <style lang="scss" module>
 .dashed_link {
   a {
-  --at-apply: "underline-dashed hover:underline-solid"
-}
+    --at-apply: "underline-dashed hover:underline-solid"
+  }
 }
 </style>
