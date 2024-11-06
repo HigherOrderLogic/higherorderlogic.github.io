@@ -65,6 +65,7 @@ export default defineNuxtConfig({
     },
     manifest: {
       background_color: '#FFF',
+      theme_color: '#000',
       display: 'minimal-ui',
       lang: 'en',
       orientation: 'portrait-primary',

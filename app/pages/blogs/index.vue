@@ -13,14 +13,14 @@ useHead({ title: 'Blogs' })
           v-for="blog in list.sort((a, b) => +new Date(b.date) - +new Date(a.date))"
           :key="blog._path"
         >
-          <div class="flex flex-col items-start py-3 md:(grid-cols-[75%,auto] flex-row pt-2)">
+          <div class="flex flex-col items-start py-2 md:flex-row">
             <h3 class="my-2 flex-auto md:m-a">
               <nuxt-link :to="blog._path">
                 {{ blog.title }}
               </nuxt-link>
             </h3>
-            <p class="my-0 op-70 md:m-a">
-              {{ useDateFormat(blog.date, 'DD MMM YYYY') }}
+            <p class="my-0 op-70 md:(my-a ml-12 min-w-fit)">
+              {{ useDateFormat(blog.date, 'DD MMMM YYYY') }}
             </p>
           </div>
         </template>
