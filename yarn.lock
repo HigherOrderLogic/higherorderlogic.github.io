@@ -5434,15 +5434,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:11.3.0":
-  version: 11.3.0
-  resolution: "@vueuse/core@npm:11.3.0"
+"@vueuse/core@npm:12.0.0":
+  version: 12.0.0
+  resolution: "@vueuse/core@npm:12.0.0"
   dependencies:
     "@types/web-bluetooth": "npm:^0.0.20"
-    "@vueuse/metadata": "npm:11.3.0"
-    "@vueuse/shared": "npm:11.3.0"
-    vue-demi: "npm:>=0.14.10"
-  checksum: 10c0/57ebed3ee2fd5b33297bbb36727424dc1707357db52954a1715366dd6583a4d53a05b10d17d16d1e5bf91fe8f12ea69fd6b232551f60167098ebc606b7234d4a
+    "@vueuse/metadata": "npm:12.0.0"
+    "@vueuse/shared": "npm:12.0.0"
+    vue: "npm:^3.5.13"
+  checksum: 10c0/416a5d2725069ace3901a77168ff24e0f9aea535b04174edf506bedd97c8f6a14d23105c80e1f58ed3b690c9931fc9089b1e5960e769e6a3e886fa8b9d320cbb
   languageName: node
   linkType: hard
 
@@ -5467,10 +5467,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/metadata@npm:11.3.0":
-  version: 11.3.0
-  resolution: "@vueuse/metadata@npm:11.3.0"
-  checksum: 10c0/4548912f325d4f250595b029357977824431db66a94651bc6801c04e4992374286ff71eb41604470638ef100338c2b80df2039d663a20f66d92799f68ccba7e9
+"@vueuse/metadata@npm:12.0.0":
+  version: 12.0.0
+  resolution: "@vueuse/metadata@npm:12.0.0"
+  checksum: 10c0/f67a256fef7961883e9921d2369be334015a4a0193987c3082b9b6386e31ed2d90de555b8d9aca63c5dda6cb3cf8df5d9b7842db77488c1ba638437befffca08
   languageName: node
   linkType: hard
 
@@ -5489,18 +5489,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/nuxt@npm:^11.3.0":
-  version: 11.3.0
-  resolution: "@vueuse/nuxt@npm:11.3.0"
+"@vueuse/nuxt@npm:^12.0.0":
+  version: 12.0.0
+  resolution: "@vueuse/nuxt@npm:12.0.0"
   dependencies:
     "@nuxt/kit": "npm:^3.14.1592"
-    "@vueuse/core": "npm:11.3.0"
-    "@vueuse/metadata": "npm:11.3.0"
+    "@vueuse/core": "npm:12.0.0"
+    "@vueuse/metadata": "npm:12.0.0"
     local-pkg: "npm:^0.5.1"
-    vue-demi: "npm:>=0.14.10"
+    vue: "npm:^3.5.13"
   peerDependencies:
     nuxt: ^3.0.0
-  checksum: 10c0/55f82d201284cde4165dbe9cf07ffea3583da95e7ea8f876419bad1d21ac52419b3702bd67e845f39e8632363155cbc692e06581303307fb6b5b086dc18afadf
+  checksum: 10c0/d54c774f60a57f919962027da9567ae6cce4d4a43990aeeff81839327d8de68ae8c565cae418a788f5b979a8d72e06ec005235cf360f3be4ae3c6fb372856e82
   languageName: node
   linkType: hard
 
@@ -5513,12 +5513,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/shared@npm:11.3.0":
-  version: 11.3.0
-  resolution: "@vueuse/shared@npm:11.3.0"
+"@vueuse/shared@npm:12.0.0":
+  version: 12.0.0
+  resolution: "@vueuse/shared@npm:12.0.0"
   dependencies:
-    vue-demi: "npm:>=0.14.10"
-  checksum: 10c0/820af5359d204e434b27ef570e5dfb5fe765e19d540738665c51c8d1569b81dd000dbe292add15dffb1b9538cbcec890626d0b47a5525e624273a0963b524e1f
+    vue: "npm:^3.5.13"
+  checksum: 10c0/7900edc00f636b9cc5fcf96e13ff9e7ec8f4f7efc0960964227cc31a26b3b45123d613a201c6b5d331534b72908b5e754ae2cba4169c5a145255987d3ad7da78
   languageName: node
   linkType: hard
 
@@ -9389,7 +9389,7 @@ __metadata:
     "@unocss/eslint-plugin": "npm:^0.64.1"
     "@unocss/nuxt": "npm:^0.64.1"
     "@vite-pwa/nuxt": "npm:^0.10.6"
-    "@vueuse/nuxt": "npm:^11.3.0"
+    "@vueuse/nuxt": "npm:^12.0.0"
     eslint: "npm:^9.15.0"
     nuxt: "npm:^3.14.1592"
     sass-embedded: "npm:^1.81.0"
