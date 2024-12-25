@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     strict: true,
   },
 
-  css: ['@fontsource-variable/inter', '~/assets/css/index.scss'],
+  css: ['@fontsource-variable/inter'],
 
   app: {
     head: {
@@ -29,6 +29,7 @@ export default defineNuxtConfig({
         { property: 'og:description', content: DESCRIPTION },
         { property: 'og:type', content: 'website' },
       ],
+      link: [{ rel: 'manifest', href: '/manifest.webmanifest' }],
     },
   },
 

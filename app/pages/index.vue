@@ -1,3 +1,7 @@
+<script setup lang="ts">
+useSeoMeta({ title: 'Horu' })
+</script>
+
 <template>
   <div>
     <h1>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useHead({ title: 'Blogs' })
+useSeoMeta({ title: 'Blogs' })
 </script>
 
 <template>
@@ -8,7 +8,7 @@ useHead({ title: 'Blogs' })
       Blogs
     </h1>
     <content-list v-slot="{ list }" path="/blogs">
-      <div class="divide-y divide-gray divide-op-20 dark:(divide-zinc divide-op-25)">
+      <div class="divide-y divide-gray divide-op-20 divide-dashed dark:(divide-zinc divide-op-25)">
         <template
           v-for="blog in list.sort((a, b) => +new Date(b.date) - +new Date(a.date))"
           :key="blog._path"

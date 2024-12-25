@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full font-normal font-[Inter_Variable] prose-neutral dark:prose-invert">
+  <div class="font-normal font-[Inter_Variable] prose-neutral dark:prose-invert">
     <div>
       <navbar />
       <div class="mx-a lt-md:px-4 md:prose" :class="[$style.dashed_link, $style.no_header_underline]">
@@ -14,7 +14,7 @@
 <style lang="scss" module>
 .dashed_link {
   a {
-    --at-apply: "underline-dashed hover:underline-solid"
+    --at-apply: 'underline-dashed hover:underline-solid'
   }
 }
 

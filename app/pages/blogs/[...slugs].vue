@@ -1,4 +1,16 @@
+<script lang="ts">
+const ContentNotFound = defineComponent({
+  setup() {
+    showError({
+      statusCode: 404,
+      statusMessage: 'Blog not found',
+    })
+  },
+})
+</script>
+
 <script setup lang="ts">
+// eslint-disable-next-line import/first
 import type { MarkdownNode, ParsedContent } from '@nuxt/content'
 
 function parseNode(node: MarkdownNode): number {
@@ -26,15 +38,6 @@ function getWordCount(parsedContent: ParsedContent): number {
 
   return wordCount
 }
-
-const ContentNotFound = defineComponent({
-  setup() {
-    showError({
-      statusCode: 404,
-      statusMessage: 'Blog not found',
-    })
-  },
-})
 </script>
 
 <template>
