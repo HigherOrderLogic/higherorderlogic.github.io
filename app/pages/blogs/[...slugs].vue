@@ -1,4 +1,6 @@
 <script lang="ts">
+import type { MinimalNode } from '@nuxt/content'
+
 const ContentNotFound = defineComponent({
   setup() {
     showError({
@@ -10,50 +12,40 @@ const ContentNotFound = defineComponent({
 </script>
 
 <script setup lang="ts">
-// eslint-disable-next-line import/first
-import type { MarkdownNode, ParsedContent } from '@nuxt/content'
-
-function parseNode(node: MarkdownNode): number {
+function getWordCount(nodesList: MinimalNode[]): number {
   let wordCount = 0
 
-  if (node.type === 'text' && node.value) {
-    wordCount += node.value.split(' ').length
-  }
-
-  for (const child of node.children ?? []) {
-    wordCount += parseNode(child)
-  }
-
-  return wordCount
-}
-
-function getWordCount(parsedContent: ParsedContent): number {
-  let wordCount = 0
-
-  if (parsedContent.body) {
-    for (const child of parsedContent.body.children) {
-      wordCount += parseNode(child)
+  for (const node of nodesList) {
+    if (Array.isArray(node)) {
+      const [content, _data, ...childNode] = node
+      wordCount += content.length + getWordCount(childNode)
+    } else {
+      wordCount += node.length
     }
   }
 
   return wordCount
 }
+
+const route = useRoute()
+
+const { data: blog } = await useAsyncData(`blog-${route.path}`, () => queryCollection('blogs').path(route.path).first())
 </script>
 
 <template>
-  <content-doc>
-    <template #default="{ doc }">
+  <div>
+    <template v-if="blog">
       <div class="pb-4">
-        <h1>{{ doc.title }}</h1>
-        <p class="op-70 divide-x *:px-2 first:*:pl-0">
-          <span>{{ useDateFormat(doc.date, 'ddd, DD MMMM YYYY') }}</span>
-          <span>{{ getWordCount(doc) }} words</span>
+        <h1>{{ blog.title }}</h1>
+        <p class="op-70 divide-x *:pr-2 not-first:*:pl-2">
+          <span>{{ useDateFormat(blog.date, 'ddd, DD MMMM YYYY') }}</span>
+          <span>{{ getWordCount(blog.body.value) }} words</span>
         </p>
       </div>
-      <content-renderer :value="doc" />
+      <content-renderer :value="blog" />
     </template>
-    <template #not-found>
+    <template v-else>
       <content-not-found />
     </template>
-  </content-doc>
+  </div>
 </template>

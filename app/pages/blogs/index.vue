@@ -1,5 +1,8 @@
 <script setup lang="ts">
 useSeoMeta({ title: 'Blogs' })
+
+const { data: blogsList } = await useAsyncData('blogsList', () =>
+  queryCollection('blogs').select('id', 'path', 'title', 'date').order('date', 'DESC').all())
 </script>
 
 <template>
@@ -7,15 +10,15 @@ useSeoMeta({ title: 'Blogs' })
     <h1 class="pb-4">
       Blogs
     </h1>
-    <content-list v-slot="{ list }" path="/blogs">
-      <div class="divide-y divide-gray divide-op-20 divide-dashed dark:(divide-zinc divide-op-25)">
+    <div class="divide-y divide-gray divide-op-20 divide-dashed dark:(divide-zinc divide-op-25)">
+      <template v-if="blogsList?.length">
         <template
-          v-for="blog in list.sort((a, b) => +new Date(b.date) - +new Date(a.date))"
-          :key="blog._path"
+          v-for="blog in blogsList"
+          :key="blog.id"
         >
           <div class="flex flex-col items-start py-2 md:flex-row">
             <h3 class="my-2 flex-auto md:m-a">
-              <nuxt-link :to="blog._path">
+              <nuxt-link :to="blog.path">
                 {{ blog.title }}
               </nuxt-link>
             </h3>
@@ -24,7 +27,12 @@ useSeoMeta({ title: 'Blogs' })
             </p>
           </div>
         </template>
-      </div>
-    </content-list>
+      </template>
+      <template v-else>
+        <div class="w-full text-center text-size-lg">
+          There is nothing here...
+        </div>
+      </template>
+    </div>
   </div>
 </template>

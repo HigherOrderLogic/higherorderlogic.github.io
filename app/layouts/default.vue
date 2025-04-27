@@ -2,7 +2,7 @@
   <div class="font-normal font-[Inter_Variable] prose-neutral dark:prose-invert">
     <div>
       <navbar />
-      <div class="mx-a lt-md:px-4 md:prose" :class="[$style.dashed_link, $style.no_header_underline]">
+      <div class="mx-a lt-md:px-4 md:prose" :class="[$style.dashedLink, $style.noHeaderUnderline]">
         <slot />
         <div class="h-8" />
         <cd />
@@ -12,13 +12,13 @@
 </template>
 
 <style lang="scss" module>
-.dashed_link {
+.dashedLink {
   a {
-    --at-apply: 'underline-dashed hover:underline-solid'
+    --at-apply: 'underline-dashed underline-offset-2 hover:(underline-solid underline-offset-1.5)'
   }
 }
 
-.no_header_underline {
+.noHeaderUnderline {
   h1, h2, h3, h4, h5, h6 {
     a {
       --at-apply: 'no-underline'

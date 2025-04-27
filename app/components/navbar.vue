@@ -1,5 +1,5 @@
 <template>
-  <header class="block flex p-4">
+  <header class="block flex px-4 py-2">
     <nuxt-link to="/">
       <img
         src="https://github.com/HigherOrderLogic.png"

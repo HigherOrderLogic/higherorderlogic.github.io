@@ -33,6 +33,8 @@ export default defineNuxtConfig({
     },
   },
 
+  ssr: false,
+
   modules: [
     '@nuxt/content',
     '@nuxtjs/color-mode',
@@ -59,10 +61,11 @@ export default defineNuxtConfig({
   },
 
   pwa: {
+    devOptions: { enabled: true },
     registerType: 'autoUpdate',
     workbox: {
       navigateFallback: '/',
-      globPatterns: ['**/*.{js,css,html,woff2}', 'api/**/*.json'],
+      globPatterns: ['**/*.{js,css,html,woff2}'],
     },
     manifest: {
       background_color: '#FFF',
@@ -73,4 +76,6 @@ export default defineNuxtConfig({
       shortcuts: [{ name: 'Blogs', url: '/blogs' }],
     },
   },
+
+  compatibilityDate: '2025-04-24',
 })
