@@ -2788,13 +2788,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@iconify/json@npm:^2.2.331":
-  version: 2.2.331
-  resolution: "@iconify/json@npm:2.2.331"
+"@iconify/json@npm:^2.2.332":
+  version: 2.2.332
+  resolution: "@iconify/json@npm:2.2.332"
   dependencies:
     "@iconify/types": "npm:*"
     pathe: "npm:^1.1.2"
-  checksum: 10c0/792a90be20b5ee7b512d15cdf16641a7d7e5636f52926fe8ba5d02272502c3d2d92227d1c07ba3563dea1b7f2f2913aa74fef628b947952c7472f641dfa5773b
+  checksum: 10c0/fe20ab78bafbdfa6023234060f04eb2da88494e8bf53aa23e887cf3ec6755279082a716d6574f0ab0c0375d515dc4f687e386e23209e80925d5bfd46b6a0ace3
   languageName: node
   linkType: hard
 
@@ -3213,9 +3213,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/content@npm:^3.5.0":
-  version: 3.5.0
-  resolution: "@nuxt/content@npm:3.5.0"
+"@nuxt/content@npm:^3.5.1":
+  version: 3.5.1
+  resolution: "@nuxt/content@npm:3.5.1"
   dependencies:
     "@nuxt/kit": "npm:^3.16.2"
     "@nuxtjs/mdc": "npm:0.17.0"
@@ -3272,7 +3272,7 @@ __metadata:
       optional: true
     sqlite3:
       optional: true
-  checksum: 10c0/8e63b617bfe206ec36aa80e7620efb97d6426926ee2f4f784400197ce26ba02be613b209cf81ad5997faa6df9622f7978742c8bccef1e2abc20dd090f94abbf0
+  checksum: 10c0/0ced6960f2bcbeef16cafab792af66dfe3d882295d30aecf548f5289b408d4a24d195c1871fe392a362849213ad51567f9772ef121799453ca89695a8d31ab08
   languageName: node
   linkType: hard
 
@@ -10634,8 +10634,8 @@ __metadata:
   dependencies:
     "@antfu/eslint-config": "npm:^4.12.0"
     "@fontsource-variable/inter": "npm:^5.2.5"
-    "@iconify/json": "npm:^2.2.331"
-    "@nuxt/content": "npm:^3.5.0"
+    "@iconify/json": "npm:^2.2.332"
+    "@nuxt/content": "npm:^3.5.1"
     "@nuxt/eslint": "npm:^1.3.0"
     "@nuxtjs/color-mode": "npm:^3.5.2"
     "@types/eslint": "npm:^9.6.1"
