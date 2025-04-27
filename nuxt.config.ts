@@ -35,7 +35,6 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@unocss/nuxt',
     '@nuxt/eslint',
-    '@vueuse/nuxt',
     '@vite-pwa/nuxt',
   ],
   devtools: {

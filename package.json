@@ -23,7 +23,7 @@
     "@unocss/eslint-plugin": "^66.0.0",
     "@unocss/nuxt": "^66.0.0",
     "@vite-pwa/nuxt": "^1.0.0",
-    "@vueuse/nuxt": "^13.1.0",
+    "@vueuse/core": "^13.1.0",
     "eslint": "^9.25.1",
     "nuxt": "^3.16.2",
     "sass-embedded": "^1.87.0",

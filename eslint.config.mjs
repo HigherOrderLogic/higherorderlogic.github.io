@@ -35,6 +35,8 @@ export default withNuxt(antfu({
         'alphabetize': { order: 'asc', caseInsensitive: true },
       },
     ],
+
+    'perfectionist/sort-imports': 'off',
   },
 }, {
   files: ['**/*.md'],

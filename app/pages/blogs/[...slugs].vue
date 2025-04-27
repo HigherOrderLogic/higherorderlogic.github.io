@@ -1,4 +1,6 @@
 <script lang="ts">
+import { useDateFormat } from '@vueuse/core'
+
 import type { MinimalNode } from '@nuxt/content'
 
 const ContentNotFound = defineComponent({
