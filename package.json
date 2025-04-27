@@ -18,7 +18,6 @@
     "@iconify/json": "^2.2.331",
     "@nuxt/content": "^3.5.0",
     "@nuxt/eslint": "^1.3.0",
-    "@nuxt/image": "^1.10.0",
     "@nuxtjs/color-mode": "^3.5.2",
     "@types/eslint": "^9.6.1",
     "@unocss/eslint-plugin": "^66.0.0",

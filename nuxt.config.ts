@@ -34,7 +34,6 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/color-mode',
     '@unocss/nuxt',
-    '@nuxt/image',
     '@nuxt/eslint',
     '@vueuse/nuxt',
     '@vite-pwa/nuxt',
