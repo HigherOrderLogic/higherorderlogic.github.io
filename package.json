@@ -15,8 +15,8 @@
   "devDependencies": {
     "@antfu/eslint-config": "^4.12.0",
     "@fontsource-variable/inter": "^5.2.5",
-    "@iconify/json": "^2.2.331",
-    "@nuxt/content": "^3.5.0",
+    "@iconify/json": "^2.2.332",
+    "@nuxt/content": "^3.5.1",
     "@nuxt/eslint": "^1.3.0",
     "@nuxtjs/color-mode": "^3.5.2",
     "@types/eslint": "^9.6.1",
