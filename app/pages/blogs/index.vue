@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useDateFormat } from '@vueuse/core'
+
 useSeoMeta({ title: 'Blogs' })
 
 const { data: blogsList } = await useAsyncData('blogsList', () =>
@@ -10,8 +12,8 @@ const { data: blogsList } = await useAsyncData('blogsList', () =>
     <h1 class="pb-4">
       Blogs
     </h1>
-    <div class="divide-y divide-gray divide-op-20 divide-dashed dark:(divide-zinc divide-op-25)">
-      <template v-if="blogsList?.length">
+    <template v-if="blogsList?.length">
+      <div class="divide-y divide-gray divide-op-20 divide-dashed dark:(divide-zinc divide-op-25)">
         <template
           v-for="blog in blogsList"
           :key="blog.id"
@@ -27,12 +29,12 @@ const { data: blogsList } = await useAsyncData('blogsList', () =>
             </p>
           </div>
         </template>
-      </template>
-      <template v-else>
-        <div class="w-full text-center text-size-lg">
-          There is nothing here...
-        </div>
-      </template>
-    </div>
+      </div>
+    </template>
+    <template v-else>
+      <div class="w-full text-center text-size-lg">
+        There is nothing here...
+      </div>
+    </template>
   </div>
 </template>

@@ -1,4 +1,6 @@
 <script lang="ts">
+import { useDateFormat } from '@vueuse/core'
+
 import type { MinimalNode } from '@nuxt/content'
 
 const ContentNotFound = defineComponent({
@@ -18,9 +20,9 @@ function getWordCount(nodesList: MinimalNode[]): number {
   for (const node of nodesList) {
     if (Array.isArray(node)) {
       const [content, _data, ...childNode] = node
-      wordCount += content.length + getWordCount(childNode)
+      wordCount += content.trim().split(/\s+/).length + getWordCount(childNode)
     } else {
-      wordCount += node.length
+      wordCount += node.trim().split(/\s+/).length
     }
   }
 

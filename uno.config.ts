@@ -2,7 +2,7 @@ import {
   defineConfig,
   presetIcons,
   presetTypography,
-  presetUno,
+  presetWind3,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
@@ -11,7 +11,7 @@ export default defineConfig({
   presets: [
     presetIcons(),
     presetTypography(),
-    presetUno({
+    presetWind3({
       dark: {
         dark: '.dark-mode',
         light: '.light-mode',
@@ -21,5 +21,8 @@ export default defineConfig({
   transformers: [
     transformerDirectives(),
     transformerVariantGroup(),
+  ],
+  shortcuts: [
+    ['transition-base', 'transition-all duration-200 ease-in-out'],
   ],
 })

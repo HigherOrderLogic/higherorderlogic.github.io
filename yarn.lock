@@ -5903,7 +5903,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:13.1.0":
+"@vueuse/core@npm:^13.1.0":
   version: 13.1.0
   resolution: "@vueuse/core@npm:13.1.0"
   dependencies:
@@ -5920,21 +5920,6 @@ __metadata:
   version: 13.1.0
   resolution: "@vueuse/metadata@npm:13.1.0"
   checksum: 10c0/335b61dc36241827f6689d1a79b86b11c003a8be7211338a40ff94c8188348e7f748d9980171cfeae5593bb0ca9b559434f83a3777ab8e8f9c836a0d94e56893
-  languageName: node
-  linkType: hard
-
-"@vueuse/nuxt@npm:^13.1.0":
-  version: 13.1.0
-  resolution: "@vueuse/nuxt@npm:13.1.0"
-  dependencies:
-    "@nuxt/kit": "npm:^3.16.2"
-    "@vueuse/core": "npm:13.1.0"
-    "@vueuse/metadata": "npm:13.1.0"
-    local-pkg: "npm:^1.1.1"
-  peerDependencies:
-    nuxt: ^3.0.0 || ^4.0.0-0
-    vue: ^3.5.0
-  checksum: 10c0/468d99b47192f6cea2c0400435efb2822b7325164dbea53addf0b2dbc2441010edac870e913d549c0409a2850790b50e7b0c1158902dde8f5d36f8bf9d14e14c
   languageName: node
   linkType: hard
 
@@ -10642,7 +10627,7 @@ __metadata:
     "@unocss/eslint-plugin": "npm:^66.0.0"
     "@unocss/nuxt": "npm:^66.0.0"
     "@vite-pwa/nuxt": "npm:^1.0.0"
-    "@vueuse/nuxt": "npm:^13.1.0"
+    "@vueuse/core": "npm:^13.1.0"
     eslint: "npm:^9.25.1"
     nuxt: "npm:^3.16.2"
     sass-embedded: "npm:^1.87.0"
