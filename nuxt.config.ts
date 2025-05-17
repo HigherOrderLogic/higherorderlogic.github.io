@@ -5,13 +5,10 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
-
   typescript: {
     strict: true,
   },
-
   css: ['@fontsource-variable/inter'],
-
   app: {
     head: {
       charset: 'utf-8',
@@ -32,9 +29,7 @@ export default defineNuxtConfig({
       link: [{ rel: 'manifest', href: '/manifest.webmanifest' }],
     },
   },
-
   ssr: false,
-
   modules: [
     '@nuxt/content',
     '@nuxtjs/color-mode',
@@ -42,22 +37,18 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@vite-pwa/nuxt',
   ],
-
   devtools: {
     enabled: true,
   },
-
   eslint: {
     config: {
       standalone: false,
     },
   },
-
   unocss: {
     preflight: true,
     components: false,
   },
-
   pwa: {
     devOptions: { enabled: true },
     registerType: 'autoUpdate',
@@ -74,6 +65,4 @@ export default defineNuxtConfig({
       shortcuts: [{ name: 'Blogs', url: '/blogs' }],
     },
   },
-
-  compatibilityDate: '2025-05-17',
 })
