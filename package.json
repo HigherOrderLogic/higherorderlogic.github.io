@@ -13,21 +13,22 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.13.1",
-    "@fontsource-variable/inter": "^5.2.5",
-    "@iconify/json": "^2.2.339",
-    "@nuxt/content": "^3.5.1",
-    "@nuxt/eslint": "^1.4.0",
+    "@antfu/eslint-config": "^5.2.1",
+    "@fontsource-variable/inter": "^5.2.6",
+    "@iconify/json": "^2.2.378",
+    "@nuxt/content": "^3.6.3",
+    "@nuxt/eslint": "^1.9.0",
     "@nuxtjs/color-mode": "^3.5.2",
     "@types/eslint": "^9.6.1",
-    "@unocss/eslint-plugin": "^66.1.2",
-    "@unocss/nuxt": "^66.1.2",
+    "@unocss/eslint-plugin": "^66.4.2",
+    "@unocss/nuxt": "^66.4.2",
     "@vite-pwa/nuxt": "1.0.4",
-    "@vueuse/core": "^13.2.0",
-    "eslint": "^9.27.0",
+    "@vueuse/core": "^13.7.0",
+    "eslint": "^9.34.0",
+    "eslint-plugin-import-x": "^4.16.1",
     "nuxt": "4.0.3",
-    "sass-embedded": "^1.89.0",
-    "typescript": "^5.8.3",
-    "vue-tsc": "^2.2.10"
+    "sass-embedded": "^1.91.0",
+    "typescript": "^5.9.2",
+    "vue-tsc": "^3.0.6"
   }
 }

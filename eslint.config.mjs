@@ -18,25 +18,22 @@ export default withNuxt(antfu({
     'vue/component-name-in-template-casing': ['error', 'kebab-case'],
     'vue/component-options-name-casing': ['error', 'kebab-case'],
 
-    'import/order': [
+    'perfectionist/sort-imports': [
       'error',
       {
-        'groups': [
-          'builtin',
-          'external',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-          'object',
-          'type',
+        groups: [
+          'value-builtin',
+          'value-external',
+          'value-internal',
+          'value-parent',
+          'value-sibling',
+          'value-index',
+          'type-import',
+          'unknown',
         ],
-        'newlines-between': 'always',
-        'alphabetize': { order: 'asc', caseInsensitive: true },
+        newlinesBetween: 1,
       },
     ],
-
-    'perfectionist/sort-imports': 'off',
   },
 }, {
   files: ['**/*.md'],

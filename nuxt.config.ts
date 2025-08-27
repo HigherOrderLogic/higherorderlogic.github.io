@@ -2,9 +2,7 @@ const NAME = 'Horu'
 const DESCRIPTION = 'Horu\'s personal website'
 
 export default defineNuxtConfig({
-  typescript: {
-    strict: true,
-  },
+  typescript: { strict: true },
   css: ['@fontsource-variable/inter'],
   app: {
     head: {
@@ -34,14 +32,9 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@vite-pwa/nuxt',
   ],
-  devtools: {
-    enabled: true,
-  },
-  eslint: {
-    config: {
-      standalone: false,
-    },
-  },
+  devtools: { enabled: true },
+  eslint: { config: { standalone: false } },
+  content: { experimental: { sqliteConnector: 'native' } },
   unocss: {
     preflight: true,
     components: false,

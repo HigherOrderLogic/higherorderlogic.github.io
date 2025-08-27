@@ -1,7 +1,7 @@
 <script lang="ts">
 import { useDateFormat } from '@vueuse/core'
 
-import type { MinimalNode } from '@nuxt/content'
+import type { MinimarkNode } from '@nuxt/content'
 
 const ContentNotFound = defineComponent({
   setup() {
@@ -14,7 +14,7 @@ const ContentNotFound = defineComponent({
 </script>
 
 <script setup lang="ts">
-function getWordCount(nodesList: MinimalNode[]): number {
+function getWordCount(nodesList: MinimarkNode[]): number {
   let wordCount = 0
 
   for (const node of nodesList) {
