@@ -22,10 +22,10 @@
     "@types/eslint": "^9.6.1",
     "@unocss/eslint-plugin": "^66.1.2",
     "@unocss/nuxt": "^66.1.2",
-    "@vite-pwa/nuxt": "^1.0.1",
+    "@vite-pwa/nuxt": "1.0.4",
     "@vueuse/core": "^13.2.0",
     "eslint": "^9.27.0",
-    "nuxt": "^3.17.3",
+    "nuxt": "4.0.3",
     "sass-embedded": "^1.89.0",
     "typescript": "^5.8.3",
     "vue-tsc": "^2.2.10"

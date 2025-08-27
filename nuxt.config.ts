@@ -2,9 +2,6 @@ const NAME = 'Horu'
 const DESCRIPTION = 'Horu\'s personal website'
 
 export default defineNuxtConfig({
-  future: {
-    compatibilityVersion: 4,
-  },
   typescript: {
     strict: true,
   },
@@ -50,7 +47,6 @@ export default defineNuxtConfig({
     components: false,
   },
   pwa: {
-    devOptions: { enabled: true },
     registerType: 'autoUpdate',
     workbox: {
       navigateFallback: '/',
