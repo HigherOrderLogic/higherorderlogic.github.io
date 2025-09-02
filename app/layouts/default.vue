@@ -2,7 +2,7 @@
   <div class="font-normal font-[Inter_Variable] prose-neutral dark:prose-invert">
     <div>
       <navbar />
-      <div class="mx-a lt-md:px-4 md:prose" :class="[$style.dashedLink, $style.noHeaderUnderline]">
+      <div class="mx-a lt-md:px-4 md:prose" :class="[$style.linkUnderline, $style.noHeaderUnderline]">
         <slot />
         <div class="h-8" />
         <cd />
@@ -12,9 +12,9 @@
 </template>
 
 <style lang="scss" module>
-.dashedLink {
+.linkUnderline {
   a {
-    --at-apply: 'underline-dashed underline-offset-3';
+    --at-apply: 'underline-dotted underline-offset-3';
   }
 }
 

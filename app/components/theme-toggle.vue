@@ -16,11 +16,11 @@ function changePreference() {
   <color-scheme>
     <button
       class="font-size-[24px]"
-      :class="[$colorMode.preference === 'system' ? 'i-mdi-monitor' : 'i-mdi-weather-sunny dark:i-mdi-weather-night']"
+      :class="[$colorMode.preference === 'system' ? 'i-ri-macbook-line' : 'i-ri-sun-line dark:i-ri-moon-line']"
       @click="changePreference"
     />
     <template #placeholder>
-      <div class="i-mdi-weather-sunny font-size-[24px]" />
+      <div class="i-ri-sun-line font-size-[24px]" />
     </template>
   </color-scheme>
 </template>
