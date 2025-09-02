@@ -30,8 +30,11 @@ function getWordCount(nodesList: MinimarkNode[]): number {
 }
 
 const route = useRoute()
-
 const { data: blog } = await useAsyncData(`blog-${route.path}`, () => queryCollection('blogs').path(route.path).first())
+
+if (blog.value) {
+  useSeoMeta({ title: blog.value.title })
+}
 </script>
 
 <template>
