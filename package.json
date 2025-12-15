@@ -1,7 +1,7 @@
 {
   "name": "horu.me",
   "type": "module",
-  "packageManager": "yarn@4.9.1",
+  "packageManager": "yarn@4.12.0",
   "license": "MIT",
   "scripts": {
     "postinstall": "yarn run prepare",
