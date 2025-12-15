@@ -40,9 +40,11 @@ if (blog.value) {
 <template>
   <div>
     <template v-if="blog">
-      <div class="pb-4">
-        <h1>{{ blog.title }}</h1>
-        <p class="op-70 divide-x *:pr-2 not-first:*:pl-2">
+      <div class="mb-8">
+        <h1 class="mb-0">
+          {{ blog.title }}
+        </h1>
+        <p class="mt-2 op-70 divide-x *:pr-2 not-first:*:pl-2">
           <span>{{ useDateFormat(blog.date, 'ddd, DD MMMM YYYY') }}</span>
           <span>{{ getWordCount(blog.body.value) }} words</span>
         </p>

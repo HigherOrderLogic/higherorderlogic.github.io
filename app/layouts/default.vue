@@ -7,7 +7,7 @@
         :class="[$style.linkUnderline, $style.noHeaderUnderline]"
       >
         <slot />
-        <div class="h-8" />
+        <div class="mb-8" />
         <cd />
       </div>
     </div>
