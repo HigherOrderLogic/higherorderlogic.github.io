@@ -17,7 +17,7 @@
 <style lang="scss" module>
 .linkUnderline {
   a {
-    --at-apply: 'underline-dotted underline-offset-3';
+    --at-apply: 'underline hover:underline-dashed underline-offset-2';
   }
 }
 
