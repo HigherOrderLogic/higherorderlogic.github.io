@@ -1,8 +1,11 @@
 <template>
-  <div class="font-normal font-[Inter_Variable] prose-neutral dark:prose-invert">
+  <div class="font-normal font-[Inter_Variable]">
     <div>
       <navbar />
-      <div class="mx-a lt-md:px-4 md:prose" :class="[$style.linkUnderline, $style.noHeaderUnderline]">
+      <div
+        class="mx-a prose prose-neutral lt-md:px-4 dark:prose-invert"
+        :class="[$style.linkUnderline, $style.noHeaderUnderline]"
+      >
         <slot />
         <div class="h-8" />
         <cd />

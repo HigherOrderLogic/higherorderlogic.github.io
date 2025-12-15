@@ -11,12 +11,7 @@ export default defineConfig({
   presets: [
     presetIcons(),
     presetTypography(),
-    presetWind3({
-      dark: {
-        dark: '.dark-mode',
-        light: '.light-mode',
-      },
-    }),
+    presetWind3(),
   ],
   transformers: [
     transformerDirectives(),

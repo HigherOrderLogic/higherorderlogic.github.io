@@ -1,5 +1,5 @@
 <template>
-  <header class="block flex px-4 py-2">
+  <header class="block flex px-4 py-2 prose-neutral dark:prose-invert">
     <nuxt-link to="/">
       <img
         src="https://github.com/HigherOrderLogic.png"
